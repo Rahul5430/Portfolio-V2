@@ -1,67 +1,8 @@
 import Image from 'next/image';
 import Link from 'next/link';
-import { IconType } from 'react-icons';
-import { BsGithub, BsInstagram, BsLinkedin } from 'react-icons/bs';
-import { LuTwitter } from 'react-icons/lu';
 
+import { navLinks, socialLinks } from '@/data/links';
 import logo from '@/public/white.png';
-
-type NavLink = {
-	label: string;
-	href: string;
-};
-
-type SocialLink = {
-	Icon: IconType;
-	label: string;
-	href: string;
-};
-
-const navLinks: NavLink[] = [
-	{
-		label: 'Home',
-		href: '/',
-	},
-	{
-		label: 'Work',
-		href: 'work',
-	},
-	{
-		label: 'About',
-		href: 'about',
-	},
-	{
-		label: 'Projects',
-		href: 'projects',
-	},
-	{
-		label: 'Contact',
-		href: 'contact',
-	},
-];
-
-const socialLinks: SocialLink[] = [
-	{
-		Icon: BsLinkedin,
-		label: 'LinkedIn',
-		href: 'https://linkedin.com/in/rahul5430/',
-	},
-	{
-		Icon: LuTwitter,
-		label: 'Twitter',
-		href: 'https://twitter.com/rahulSharma5430/',
-	},
-	{
-		Icon: BsGithub,
-		label: 'GitHub',
-		href: 'https://github.com/Rahul5430/',
-	},
-	{
-		Icon: BsInstagram,
-		label: 'Instagram',
-		href: 'https://www.instagram.com/rahulsharma_8562/',
-	},
-];
 
 const NavBtns = () => (
 	<div className='items-start flex flex-none flex-row flex-nowrap gap-6 h-min w-min justify-start'>
