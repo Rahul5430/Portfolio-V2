@@ -5,6 +5,7 @@ import { Inter } from 'next/font/google';
 import Image from 'next/image';
 import React from 'react';
 
+import BG_BOTTOM from '@/public/bg_bottom.webp';
 import BG_TOP from '@/public/bg_top.webp';
 
 const inter = Inter({ subsets: ['latin'] });
@@ -24,7 +25,14 @@ export default function RootLayout({
 			<body className={inter.className}>
 				<div className='body-container'>
 					<div className='main-container'>{children}</div>
-					<div className='flex-none h-[600px] w-[1200px] max-w-[1200px] pointer-events-none z-0 absolute top-0'>
+					<div className='flex-none h-auto w-[1200px] animate-fadeAnim max-w-[1200px] absolute -bottom-[100px]'>
+						<Image
+							alt='Gradient Background'
+							src={BG_BOTTOM}
+							className='pointer-events-none select-none w-full h-full object-center object-cover'
+						/>
+					</div>
+					<div className='flex-none h-[600px] w-[1200px] animate-fadeAnim max-w-[1200px] pointer-events-none z-0 absolute top-0'>
 						<Image
 							alt='Gradient Background'
 							src={BG_TOP}
