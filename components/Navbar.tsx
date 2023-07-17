@@ -79,7 +79,7 @@ const Navbar = () => {
 
 	useEffect(() => {
 		if (
-			((width && width > 809) || window.innerWidth > 809) &&
+			((width && width > 809) || window?.innerWidth > 809) &&
 			isMobileNavOpen
 		) {
 			setIsMobileNavOpen(false);
@@ -122,7 +122,7 @@ const Navbar = () => {
 								</a>
 							))}
 							{((width && width <= 809) ||
-								window.innerWidth <= 809) && (
+								window?.innerWidth <= 809) && (
 								<AnimatedHamburgerIcon
 									isMobileNavOpen={isMobileNavOpen}
 									setIsMobileNavOpen={setIsMobileNavOpen}
