@@ -30,6 +30,7 @@ export default function RootLayout({
 							alt='Gradient Background'
 							src={BG_BOTTOM}
 							className='pointer-events-none select-none w-full h-full object-center object-cover'
+							priority
 						/>
 					</div>
 					<div className='flex-none h-[600px] w-[1200px] animate-fadeAnim max-w-[1200px] pointer-events-none z-0 absolute top-0'>
