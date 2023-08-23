@@ -4,7 +4,7 @@
 
 @layer components {
 	.body-container {
-		@apply bg-[#0A0A0D] min-h-full w-auto flex flex-nowrap flex-col items-center gap-0 h-min overflow-hidden p-0 relative;
+		@apply bg-[#0A0A0D] min-h-screen w-auto flex flex-nowrap flex-col items-center gap-0 h-min overflow-hidden p-0 relative;
 	}
 	.main-container {
 		@apply z-[2] w-[708px] max-[809px]:w-full max-[809px]:p-2 flex items-center justify-start gap-8 flex-initial shrink-0 flex-col flex-nowrap h-min overflow-hidden py-6;
@@ -14,5 +14,10 @@
 	}
 	.flex-main {
 		@apply flex flex-none flex-row flex-nowrap items-center h-min;
+	}
+	.gradient-text {
+		-webkit-text-fill-color: transparent;
+		background-size: 100% 100%;
+		@apply bg-gradient-to-r from-[#0560FF9C] to-[#FF5AD1E6] bg-clip-text;
 	}
 }
