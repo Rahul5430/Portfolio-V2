@@ -5,7 +5,18 @@ module.exports = {
 		'./components/**/*.{js,ts,jsx,tsx,mdx}',
 	],
 	theme: {
+		screens: {
+			tablet: '809px',
+			desktop: '1200px',
+		},
 		extend: {
+			width: {
+				desktop: '1200px',
+				708: '708px',
+			},
+			maxWidth: {
+				desktop: '1200px',
+			},
 			animation: {
 				fadeAnim: 'fade-animation 700ms ease-in',
 			},

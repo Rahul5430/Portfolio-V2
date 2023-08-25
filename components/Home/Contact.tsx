@@ -4,18 +4,18 @@ import { LuMail, LuTwitter } from 'react-icons/lu';
 import ChatBG from '@/public/chat.webp';
 
 const Contact = () => (
-	<div className='flex-main justify-center w-[708px] relative gap-2.5 max-[809px]:p-3 max-[809px]:w-full'>
-		<div className='flex-main justify-between w-[708px] py-6 px-8 rounded-3xl bg-gradient-to-l from-[#2B161D8C] to-[#1E1C3280] max-[809px]:w-px max-[809px]:flex-col max-[809px]:grow'>
-			<div className='flex-main flex-col items-start gap-2.5 h-[229px] w-[314px] justify-center max-[809px]:h-min max-[809px]:order-1 max-[809px]:gap-3 max-[809px]:w-full'>
-				<div className='flex-none w-full h-[169px] relative max-[809px]:h-[156px]'>
-					<div className='outline-none flex flex-col justify-start h-auto absolute opacity-80 left-0 top-[73px] whitespace-pre-wrap w-[314px] max-[809px]:w-full'>
-						<p className='font-normal text-[#ECEDEE] text-xl max-[809px]:text-[17px] leading-[150%] tracking-[-0.34px]'>
+	<div className='flex-main justify-center w-708 relative gap-2.5 max-tablet:p-3 max-tablet:w-full'>
+		<div className='flex-main justify-between w-708 py-6 px-8 rounded-3xl bg-gradient-to-l from-[#2B161D8C] to-[#1E1C3280] max-tablet:w-px max-tablet:flex-col max-tablet:grow'>
+			<div className='flex-main flex-col items-start gap-2.5 h-[229px] w-[314px] justify-center max-tablet:h-min max-tablet:order-1 max-tablet:gap-3 max-tablet:w-full'>
+				<div className='flex-none w-full h-[169px] relative max-tablet:h-[156px]'>
+					<div className='outline-none flex flex-col justify-start h-auto absolute opacity-80 left-0 top-[73px] whitespace-pre-wrap w-[314px] max-tablet:w-full'>
+						<p className='font-normal text-[#ECEDEE] text-xl max-tablet:text-[17px] leading-[150%] tracking-[-0.34px]'>
 							Want to create something awesome? Or, you have any
 							query? Drop an email or tweet.
 						</p>
 					</div>
 					<div className='outline-none flex flex-col justify-start h-auto absolute left-0 top-0 whitespace-pre w-auto'>
-						<p className='font-bold text-[44px] max-[809px]:text-[42px] max-[809px]:leading-[120%] max-[809px]:tracking-[-0.88px]'>
+						<p className='font-bold text-[44px] max-tablet:text-[42px] max-tablet:leading-[120%] max-tablet:tracking-[-0.88px]'>
 							<span
 								className='bg-gradient-to-r from-[#F06844] to-[#6583C1] inline-block bg-clip-text text-transparent'
 								style={{ WebkitTextFillColor: 'transparent' }}
@@ -38,7 +38,7 @@ const Contact = () => (
 							</div>
 						</div>
 						<div className='flex flex-col flex-none justify-start shrink-0 whitespace-pre h-auto w-auto'>
-							<p className='text-medium text-xl leading-8 max-[809px]:text-lg'>
+							<p className='text-medium text-xl leading-8 max-tablet:text-lg'>
 								<span
 									className='bg-gradient-to-r from-[#1584EB] to-[#24D6D9] inline-block bg-clip-text text-transparent'
 									style={{
@@ -62,7 +62,7 @@ const Contact = () => (
 							</div>
 						</div>
 						<div className='flex flex-col flex-none justify-start shrink-0 whitespace-pre h-auto w-auto'>
-							<p className='text-medium text-xl leading-8 max-[809px]:text-lg'>
+							<p className='text-medium text-xl leading-8 max-tablet:text-lg'>
 								<span
 									className='bg-gradient-to-r from-[#F06844] to-[#6583C1] inline-block bg-clip-text text-transparent'
 									style={{
@@ -76,7 +76,7 @@ const Contact = () => (
 					</a>
 				</div>
 			</div>
-			<div className='flex-none h-auto w-[275px] aspect-square max-[809px]:order-none'>
+			<div className='flex-none h-auto w-[275px] aspect-square max-tablet:order-none'>
 				<Image
 					src={ChatBG}
 					alt='Chat'

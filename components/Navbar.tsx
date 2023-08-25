@@ -24,7 +24,7 @@ const NavBtns = ({
 
 	return (
 		<div
-			className={`items-start flex flex-none flex-row flex-nowrap h-min w-min justify-start max-[809px]:flex-col max-[809px]:z-[1] max-[809px]:w-full ${className}`}
+			className={`items-start flex flex-none flex-row flex-nowrap h-min w-min justify-start max-tablet:flex-col max-tablet:z-[1] max-tablet:w-full ${className}`}
 		>
 			{navLinks.map(({ label, href }) => (
 				<Link
@@ -99,17 +99,17 @@ const Navbar = () => {
 	}, [isMobileNavOpen, width]);
 
 	return (
-		<div className='flex-main flex-col justify-center w-full relative max-[809px]:p-3 max-[809px]:overflow-visible'>
-			<div className='flex-none h-[54.19px] relative overflow-visible w-full max-[809px]:flex-main max-[809px]:items-start max-[809px]:h-[54.19px] max-[809px]:justify-center max-[809px]:z-[2]'>
+		<div className='flex-main flex-col justify-center w-full relative max-tablet:p-3 max-tablet:overflow-visible'>
+			<div className='flex-none h-[54.19px] relative overflow-visible w-full max-tablet:flex-main max-tablet:items-start max-tablet:h-[54.19px] max-tablet:justify-center max-tablet:z-[2]'>
 				<div
 					className={`w-full rounded-xl flex-main justify-between p-4 bg-[#1C162F66] ${
 						(width && width > 809) || isMobileNavOpen
 							? 'backdrop-blur-[20px]'
 							: 'backdrop-blur-md'
-					} backdrop-blur-[20px] border border-neutral-600/20 max-[809px]:pt-[18px] max-[809px]:pb-[17px] max-[809px]:items-start`}
+					} backdrop-blur-[20px] border border-neutral-600/20 max-tablet:pt-[18px] max-tablet:pb-[17px] max-tablet:items-start`}
 				>
 					<div
-						className={`flex-main justify-start max-[809px]:flex-col max-[809px]:z-[1] max-[809px]:w-px max-[809px]:grow max-[809px]:items-start ${
+						className={`flex-main justify-start max-tablet:flex-col max-tablet:z-[1] max-tablet:w-px max-tablet:grow max-tablet:items-start ${
 							(width && width > 809) || isMobileNavOpen
 								? 'gap-6'
 								: 'gap-0'

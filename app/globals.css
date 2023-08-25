@@ -7,7 +7,7 @@
 		@apply bg-[#0A0A0D] min-h-screen w-auto flex flex-nowrap flex-col items-center gap-0 h-min overflow-hidden p-0 relative;
 	}
 	.main-container {
-		@apply z-[2] w-[708px] max-[809px]:w-full max-[809px]:p-2 flex items-center justify-start gap-8 flex-initial shrink-0 flex-col flex-nowrap h-min overflow-hidden py-6;
+		@apply z-[2] w-708 max-tablet:w-full max-tablet:p-2 flex items-center justify-start gap-8 flex-initial shrink-0 flex-col flex-nowrap h-min overflow-hidden py-6;
 	}
 	.hover-underline {
 		@apply inline-block px-px after:absolute after:w-full after:scale-0 after:h-0.5 after:bottom-0 after:left-0 after:origin-bottom-right after:bg-white after:transition-transform after:duration-[250ms] after:ease-out hover:after:origin-bottom-left hover:after:scale-100;

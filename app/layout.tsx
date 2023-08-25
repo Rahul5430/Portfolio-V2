@@ -25,7 +25,7 @@ export default function RootLayout({
 			<body className={inter.className}>
 				<div className='body-container'>
 					<div className='main-container'>{children}</div>
-					<div className='flex-none h-auto w-[1200px] animate-fadeAnim max-w-[1200px] absolute -bottom-[100px]'>
+					<div className='flex-none h-auto w-desktop animate-fadeAnim max-w-desktop absolute -bottom-[100px]'>
 						<Image
 							alt='Gradient Background'
 							src={BG_BOTTOM}
@@ -33,7 +33,7 @@ export default function RootLayout({
 							priority
 						/>
 					</div>
-					<div className='flex-none h-[600px] w-[1200px] animate-fadeAnim max-w-[1200px] pointer-events-none z-0 absolute top-0'>
+					<div className='flex-none h-[600px] w-desktop animate-fadeAnim max-w-desktop pointer-events-none z-0 absolute top-0'>
 						<Image
 							alt='Gradient Background'
 							src={BG_TOP}

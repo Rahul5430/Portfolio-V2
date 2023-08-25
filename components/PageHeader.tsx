@@ -15,7 +15,7 @@ const PageHeader = ({
 	gradientFrom,
 	gradientTo,
 }: PageHeaderProps) => (
-	<div className='flex-main flex-col justify-center w-[708px] gap-3 px-6 pb-3 pt-12'>
+	<div className='flex-main flex-col justify-center w-708 gap-3 px-6 pb-3 pt-12'>
 		<div className='w-auto h-auto whitespace-pre-wrap'>
 			<p
 				className={`font-bold text-[32px] leading-[40px] -tracking-[0.25px] gradient-text ${gradientFrom} ${gradientTo}`}
