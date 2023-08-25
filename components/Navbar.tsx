@@ -32,7 +32,7 @@ const NavBtns = ({
 					href={href}
 					className='relative cursor-pointer no-underline'
 				>
-					<p className='hover-underline font-medium text-[#ECEDEE] text-base outline-none'>
+					<p className='hover-underline font-medium text-bright-gray text-base outline-none'>
 						{label}
 					</p>
 				</Link>
@@ -49,7 +49,7 @@ const AnimatedHamburgerIcon = ({
 	setIsMobileNavOpen: (toggle: boolean) => void;
 }) => {
 	const spanClassName =
-		'block absolute h-px opacity-100 bg-[#ECEDEE] rounded-sm left-0 transition-all duration-[250ms]';
+		'block absolute h-px opacity-100 bg-bright-gray rounded-sm left-0 transition-all duration-[250ms]';
 
 	return (
 		// eslint-disable-next-line jsx-a11y/click-events-have-key-events

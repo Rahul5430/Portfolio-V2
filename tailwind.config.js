@@ -10,6 +10,9 @@ module.exports = {
 			desktop: '1200px',
 		},
 		extend: {
+			colors: {
+				'bright-gray': '#ECEDEE',
+			},
 			width: {
 				desktop: '1200px',
 				708: '708px',

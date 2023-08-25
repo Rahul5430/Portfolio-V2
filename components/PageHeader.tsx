@@ -15,7 +15,7 @@ const PageHeader = ({
 	gradientFrom,
 	gradientTo,
 }: PageHeaderProps) => (
-	<div className='flex-main flex-col justify-center w-708 gap-3 px-6 pb-3 pt-12'>
+	<div className='flex-main flex-col justify-center w-708 gap-3 px-6 pb-3 pt-12 max-tablet:w-full max-tablet:pt-8'>
 		<div className='w-auto h-auto whitespace-pre-wrap'>
 			<p
 				className={`font-bold text-[32px] leading-[40px] -tracking-[0.25px] gradient-text ${gradientFrom} ${gradientTo}`}
@@ -23,8 +23,8 @@ const PageHeader = ({
 				{title}
 			</p>
 		</div>
-		<div className='w-[455px] h-auto whitespace-pre-wrap break-words'>
-			<h3 className='text-[#ECEDEE] text-lg text-center leading-[140%]'>
+		<div className='w-[455px] h-auto whitespace-pre-wrap break-words max-tablet:w-full'>
+			<h3 className='font-normal text-bright-gray text-lg text-center leading-[140%] max-tablet:text-base'>
 				{about}
 			</h3>
 		</div>

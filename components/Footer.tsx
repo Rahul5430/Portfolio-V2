@@ -20,7 +20,7 @@ const Footer = () => (
 									href={href}
 									target='_blank'
 									rel='noopener noreferrer'
-									className='font-normal cursor-pointer no-underline outline-none text-xs text-white/60 hover:text-[#ECEDEE] leading-4 whitespace-pre'
+									className='font-normal cursor-pointer no-underline outline-none text-xs text-white/60 hover:text-bright-gray leading-4 whitespace-pre'
 								>
 									{label}
 								</a>

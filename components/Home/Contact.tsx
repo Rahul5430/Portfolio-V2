@@ -9,7 +9,7 @@ const Contact = () => (
 			<div className='flex-main flex-col items-start gap-2.5 h-[229px] w-[314px] justify-center max-tablet:h-min max-tablet:order-1 max-tablet:gap-3 max-tablet:w-full'>
 				<div className='flex-none w-full h-[169px] relative max-tablet:h-[156px]'>
 					<div className='outline-none flex flex-col justify-start h-auto absolute opacity-80 left-0 top-[73px] whitespace-pre-wrap w-[314px] max-tablet:w-full'>
-						<p className='font-normal text-[#ECEDEE] text-xl max-tablet:text-[17px] leading-[150%] tracking-[-0.34px]'>
+						<p className='font-normal text-bright-gray text-xl max-tablet:text-[17px] leading-[150%] tracking-[-0.34px]'>
 							Want to create something awesome? Or, you have any
 							query? Drop an email or tweet.
 						</p>
