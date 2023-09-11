@@ -1,7 +1,7 @@
 import Image from 'next/image';
 import { LuMail, LuTwitter } from 'react-icons/lu';
 
-import ChatBG from '@/public/chat.webp';
+import ChatBG from '@/public/assets/chat.webp';
 
 const Contact = () => (
 	<div className='flex-main justify-center w-708 relative gap-2.5 max-tablet:p-3 max-tablet:w-full'>

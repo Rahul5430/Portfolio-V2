@@ -1,6 +1,9 @@
 import Image from 'next/image';
 
-import Pic from '@/public/me.png';
+import carouselData from '@/data/carousel';
+import Pic from '@/public/assets/me.png';
+
+import Carousel from '../Carousel';
 
 const Me = () => (
 	<div className='flex-main items-start flex-col w-full justify-start gap-[18px] p-4 pt-8 max-tablet:px-3 max-tablet:pt-4'>
@@ -35,6 +38,7 @@ const Me = () => (
 				studio
 			</p>
 		</div>
+		<Carousel data={carouselData} />
 	</div>
 );
 

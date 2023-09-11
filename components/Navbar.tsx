@@ -6,7 +6,7 @@ import { useEffect, useState } from 'react';
 
 import { navLinks, socialLinks } from '@/data/links';
 import useWindowSize from '@/hooks/useWindowSize';
-import logo from '@/public/white.png';
+import logo from '@/public/assets/white.png';
 
 const NavBtns = ({
 	isMobileNavOpen,

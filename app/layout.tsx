@@ -5,8 +5,8 @@ import { Inter } from 'next/font/google';
 import Image from 'next/image';
 import React from 'react';
 
-import BG_BOTTOM from '@/public/bg_bottom.webp';
-import BG_TOP from '@/public/bg_top.webp';
+import BG_BOTTOM from '@/public/assets/bg_bottom.webp';
+import BG_TOP from '@/public/assets/bg_top.webp';
 
 const inter = Inter({ subsets: ['latin'] });
 

@@ -22,11 +22,20 @@ module.exports = {
 			},
 			animation: {
 				fadeAnim: 'fade-animation 700ms ease-in',
+				carousel: 'carousel 15s linear infinite',
 			},
 			keyframes: {
 				'fade-animation': {
 					'0%': { opacity: 0.001 },
 					'100%': { opacity: 1 },
+				},
+				carousel: {
+					from: {
+						transform: 'translateX(0)',
+					},
+					to: {
+						transform: 'translateX(calc(-100% - 48px))',
+					},
 				},
 			},
 		},
