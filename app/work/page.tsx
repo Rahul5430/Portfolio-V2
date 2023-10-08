@@ -1,6 +1,7 @@
 import Footer from '@/components/Footer';
 import Navbar from '@/components/Navbar';
 import PageHeader from '@/components/PageHeader';
+import WorkCards from '@/components/Work/WorkCards';
 
 export default function Work() {
 	return (
@@ -12,6 +13,7 @@ export default function Work() {
 				gradientFrom='from-[#8C2CE3]'
 				gradientTo='to-[#FF2496]'
 			/>
+			<WorkCards />
 			<Footer />
 		</>
 	);
