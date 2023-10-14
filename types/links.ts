@@ -10,3 +10,8 @@ export type SocialLink = {
 	label: string;
 	href: string;
 };
+
+export type ContactLink = SocialLink & {
+	color: string;
+	bg: string;
+};
