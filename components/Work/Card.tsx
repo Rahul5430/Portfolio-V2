@@ -8,9 +8,10 @@ import { WorkType } from '@/types';
 
 interface CardProps {
 	data: WorkType;
+	threshold: number;
 }
 
-const Card = ({ data }: CardProps) => {
+const Card = ({ data, threshold }: CardProps) => {
 	const [isIntersecting, setIsIntersecting] = useState(false);
 	const ref = useRef<HTMLDivElement>(null);
 
@@ -19,12 +20,12 @@ const Card = ({ data }: CardProps) => {
 			([entry]) => {
 				setIsIntersecting(entry.isIntersecting);
 			},
-			{ threshold: 0.85 }
+			{ threshold }
 		);
 		observer.observe(ref.current as Element);
 
 		return () => observer.disconnect();
-	}, [isIntersecting]);
+	}, [isIntersecting, threshold]);
 
 	useEffect(() => {
 		if (isIntersecting) {
