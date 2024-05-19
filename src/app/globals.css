@@ -2,32 +2,44 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
+@layer base {
+	html,
+	body {
+		@apply h-full bg-[#0A0A0D];
+	}
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
-  }
-}
+@layer components {
+	.body-container {
+		@apply bg-[#0A0A0D] min-h-full w-auto flex flex-nowrap flex-col items-center gap-0 h-min overflow-hidden p-0 relative;
+	}
 
-body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
-}
+	.main-container {
+		@apply z-[2] w-708 max-tablet:w-full max-tablet:p-2 flex items-center justify-start gap-8 flex-initial shrink-0 flex-col flex-nowrap h-min overflow-hidden py-6;
+	}
 
-@layer utilities {
-  .text-balance {
-    text-wrap: balance;
-  }
+	.hover-underline {
+		@apply inline-block px-px after:absolute after:w-full after:scale-0 after:h-0.5 after:bottom-0 after:left-0 after:origin-bottom-right after:bg-white after:transition-transform after:duration-[250ms] after:ease-out hover:after:origin-bottom-left hover:after:scale-100;
+	}
+
+	.flex-main {
+		@apply flex flex-none flex-row flex-nowrap items-center h-min;
+	}
+
+	.gradient-text {
+		-webkit-text-fill-color: transparent;
+		background-size: 100% 100%;
+		@apply bg-gradient-to-r from-[#0560FF9C] to-[#FF5AD1E6] bg-clip-text;
+	}
+
+	.speech-bubble {
+		@apply translate-y-0 animate-float text-center uppercase font-bold tracking-[3px] text-[15px] text-[#774f38] bg-[#ece5ce] relative p-[50px] rounded-[11px] shadow-[20px_20px_rgba(131,175,155,1)];
+	}
+
+	.speech-bubble::after {
+		content: '.';
+		-webkit-text-fill-color: #ece5ce;
+		text-shadow: 22px 22px #83af9b;
+		@apply translate-y-0 animate-float2 text-left font-bold shadow-[22px_22px_rgba(131,175,155,1)] text-[55px] w-[55px] h-[11px] leading-[30px] bg-[#ece5ce] rounded-[11px] absolute block left-0 -bottom-[30px] -z-[2];
+	}
 }

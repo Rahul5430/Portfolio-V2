@@ -1,0 +1,8 @@
+{
+	"css.customData": [".vscode/tailwind.json"],
+	"editor.codeActionsOnSave": {
+		"source.organizeImports": "explicit",
+		"source.fixAll.eslint": "explicit"
+	},
+	"editor.formatOnSave": true
+}
