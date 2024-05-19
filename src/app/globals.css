@@ -33,13 +33,13 @@
 	}
 
 	.speech-bubble {
-		@apply relative translate-y-0 animate-float rounded-[11px] bg-[#ece5ce] p-[50px] text-center text-[15px] font-bold uppercase tracking-[3px] text-[#774f38] shadow-[20px_20px_rgba(131,175,155,1)];
+		@apply relative w-1/2 translate-y-0 animate-float rounded-[11px] bg-[#ece5ce] p-[30px] text-justify text-[15px] text-[#774f38] shadow-[-20px_20px_rgba(131,175,155,1)] max-tablet:w-[300px] max-tablet:mt-10;
 	}
 
 	.speech-bubble::after {
 		content: '.';
 		-webkit-text-fill-color: #ece5ce;
-		text-shadow: 22px 22px #83af9b;
-		@apply absolute -bottom-[30px] left-0 -z-[2] block h-[11px] w-[55px] translate-y-0 animate-float2 rounded-[11px] bg-[#ece5ce] text-left text-[55px] font-bold leading-[30px] shadow-[22px_22px_rgba(131,175,155,1)];
+		text-shadow: -22px 22px #83af9b;
+		@apply absolute -bottom-[30px] right-0 -z-[2] block h-[11px] w-[55px] translate-y-0 animate-float2 rounded-[11px] bg-[#ece5ce] text-right text-[55px] font-bold leading-[30px] shadow-[-22px_22px_rgba(131,175,155,1)];
 	}
 }
