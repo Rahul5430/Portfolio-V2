@@ -3,9 +3,9 @@ import workData from '@/data/work';
 import Card from './Card';
 
 const WorkCards = ({ threshold = 0.7 }) => (
-	<div className='pb-10 max-tablet:p-0 max-tablet:w-full'>
-		<div className='p-1 w-708 max-tablet:pb-[72px] max-tablet:w-full'>
-			<div className='gap-3.5 grid grid-cols-3 grid-rows-2 auto-rows-fr justify-center w-full max-tablet:gap-3 max-tablet:grid-cols-[repeat(1,_minmax(200px,_1fr))]'>
+	<div className='pb-10 max-tablet:w-full max-tablet:p-0'>
+		<div className='w-708 p-1 max-tablet:w-full max-tablet:pb-[72px]'>
+			<div className='grid w-full auto-rows-fr grid-cols-3 grid-rows-2 justify-center gap-3.5 max-tablet:grid-cols-[repeat(1,_minmax(200px,_1fr))] max-tablet:gap-3'>
 				{workData.map((work) => (
 					<Card
 						key={work.workplace}

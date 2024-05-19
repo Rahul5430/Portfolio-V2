@@ -1,26 +1,26 @@
 import { socialLinks } from '@/data/links';
 
 const Footer = () => (
-	<div className='flex-none h-auto relative w-full'>
-		<div className='w-full flex-main flex-col justify-start gap-20 px-32 pt-20 pb-[60px]'>
-			<div className='flex-main flex-col gap-3 justify-center w-min'>
-				<div className='flex flex-col outline-none justify-start opacity-50 w-auto whitespace-pre'>
-					<p className='font-medium text-[#72788899] text-base'>
+	<div className='relative h-auto w-full flex-none'>
+		<div className='flex-main w-full flex-col justify-start gap-20 px-32 pb-[60px] pt-20'>
+			<div className='flex-main w-min flex-col justify-center gap-3'>
+				<div className='flex w-auto flex-col justify-start whitespace-pre opacity-50 outline-none'>
+					<p className='text-base font-medium text-[#72788899]'>
 						@rahul5430 {new Date().getFullYear()}
 					</p>
 				</div>
-				<div className='flex-main items-start gap-4 justify-start w-min'>
+				<div className='flex-main w-min items-start justify-start gap-4'>
 					{socialLinks.map(({ label, href }) => (
 						<div
 							key={label}
-							className='outline-none flex flex-col justify-start opacity-20 w-auto h-auto whitespace-pre'
+							className='flex h-auto w-auto flex-col justify-start whitespace-pre opacity-20 outline-none'
 						>
-							<p className='text-xs text-white/60 font-medium'>
+							<p className='text-xs font-medium text-white/60'>
 								<a
 									href={href}
 									target='_blank'
 									rel='noopener noreferrer'
-									className='font-normal cursor-pointer no-underline outline-none text-xs text-white/60 hover:text-bright-gray leading-4 whitespace-pre'
+									className='cursor-pointer whitespace-pre text-xs font-normal leading-4 text-white/60 no-underline outline-none hover:text-bright-gray'
 								>
 									{label}
 								</a>
@@ -29,9 +29,9 @@ const Footer = () => (
 					))}
 				</div>
 			</div>
-			<div className='flex-main h-4 gap-2 justify-center w-min opacity-20'>
-				<div className='outline-none flex flex-col justify-start w-auto whitespace-pre h-auto flex-none opacity-100'>
-					<p className='text-xs text-white/60 font-medium'>
+			<div className='flex-main h-4 w-min justify-center gap-2 opacity-20'>
+				<div className='flex h-auto w-auto flex-none flex-col justify-start whitespace-pre opacity-100 outline-none'>
+					<p className='text-xs font-medium text-white/60'>
 						Made with &#128153;(and Nextjs) by Rahul Sharma
 					</p>
 				</div>

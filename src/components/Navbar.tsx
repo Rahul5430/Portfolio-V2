@@ -24,7 +24,7 @@ const NavBtns = ({
 
 	return (
 		<div
-			className={`items-start flex flex-none flex-row flex-nowrap h-min w-min justify-start max-tablet:flex-col max-tablet:z-[1] max-tablet:w-full ${className}`}
+			className={`flex h-min w-min flex-none flex-row flex-nowrap items-start justify-start max-tablet:z-[1] max-tablet:w-full max-tablet:flex-col ${className}`}
 		>
 			{navLinks.map(({ label, href }) => (
 				<Link
@@ -32,7 +32,7 @@ const NavBtns = ({
 					href={href}
 					className='relative cursor-pointer no-underline'
 				>
-					<p className='hover-underline font-medium text-bright-gray text-base outline-none'>
+					<p className='hover-underline text-base font-medium text-bright-gray outline-none'>
 						{label}
 					</p>
 				</Link>
@@ -54,7 +54,7 @@ const AnimatedHamburgerIcon = ({
 	return (
 		// eslint-disable-next-line jsx-a11y/click-events-have-key-events
 		<div
-			className='cursor-pointer h-4 w-4 relative rotate-0 transition-all duration-500'
+			className='relative h-4 w-4 rotate-0 cursor-pointer transition-all duration-500'
 			onClick={() => setIsMobileNavOpen(!isMobileNavOpen)}
 			role='button'
 			tabIndex={0}
@@ -63,24 +63,24 @@ const AnimatedHamburgerIcon = ({
 			<span
 				className={`${spanClassName} rotate-0 ${
 					isMobileNavOpen
-						? 'top-[7.5px] w-0 left-1/2'
+						? 'left-1/2 top-[7.5px] w-0'
 						: 'top-0.5 w-3.5'
 				}`}
 			/>
 			<span
-				className={`${spanClassName} w-3.5 top-[7.5px] ${
+				className={`${spanClassName} top-[7.5px] w-3.5 ${
 					isMobileNavOpen ? 'rotate-45' : 'rotate-0'
 				}`}
 			/>
 			<span
-				className={`${spanClassName} w-3.5 top-[7.5px] ${
+				className={`${spanClassName} top-[7.5px] w-3.5 ${
 					isMobileNavOpen ? '-rotate-45' : 'rotate-0'
 				}`}
 			/>
 			<span
 				className={`${spanClassName} rotate-0 ${
 					isMobileNavOpen
-						? 'top-[7.5px] w-0 left-1/2'
+						? 'left-1/2 top-[7.5px] w-0'
 						: 'top-[13px] w-3.5'
 				}`}
 			/>
@@ -100,23 +100,23 @@ const Navbar = () => {
 	}, [isMobileNavOpen, width]);
 
 	return (
-		<div className='flex-main flex-col justify-center w-full relative max-tablet:p-3 max-tablet:overflow-visible'>
-			<div className='flex-none h-[54.19px] relative overflow-visible w-full max-tablet:flex-main max-tablet:items-start max-tablet:h-[54.19px] max-tablet:justify-center max-tablet:z-[2]'>
+		<div className='flex-main relative w-full flex-col justify-center max-tablet:overflow-visible max-tablet:p-3'>
+			<div className='max-tablet:flex-main relative h-[54.19px] w-full flex-none overflow-visible max-tablet:z-[2] max-tablet:h-[54.19px] max-tablet:items-start max-tablet:justify-center'>
 				<div
-					className={`w-full rounded-xl flex-main justify-between p-4 bg-[#1C162F66] ${
+					className={`flex-main w-full justify-between rounded-xl bg-[#1C162F66] p-4 ${
 						(width && width > 809) || isMobileNavOpen
 							? 'backdrop-blur-[20px]'
 							: 'backdrop-blur-md'
-					} backdrop-blur-[20px] border border-neutral-600/20 max-tablet:pt-[18px] max-tablet:pb-[17px] max-tablet:items-start`}
+					} border border-neutral-600/20 backdrop-blur-[20px] max-tablet:items-start max-tablet:pb-[17px] max-tablet:pt-[18px]`}
 				>
 					<div
-						className={`flex-main justify-start max-tablet:flex-col max-tablet:z-[1] max-tablet:w-px max-tablet:grow max-tablet:items-start ${
+						className={`flex-main justify-start max-tablet:z-[1] max-tablet:w-px max-tablet:grow max-tablet:flex-col max-tablet:items-start ${
 							(width && width > 809) || isMobileNavOpen
 								? 'gap-6'
 								: 'gap-0'
 						}`}
 					>
-						<div className='w-7 h-auto'>
+						<div className='h-auto w-7'>
 							<Link href='/'>
 								<Image src={logo} alt='Logo' />
 							</Link>
@@ -134,7 +134,7 @@ const Navbar = () => {
 									href={href}
 									target='_blank'
 									rel='noopener noreferrer'
-									className='flex-main cursor-pointer gap-3.5 h-4 justify-center no-underline w-4'
+									className='flex-main h-4 w-4 cursor-pointer justify-center gap-3.5 no-underline'
 									aria-label={label}
 								>
 									<Icon color='white' />

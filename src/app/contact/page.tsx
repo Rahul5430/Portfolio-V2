@@ -16,7 +16,8 @@ export default function Work() {
 						href={href}
 						target='_blank'
 						rel='noopener noreferrer'
-						className={`flex items-center justify-center ${bg} h-11 w-11 rounded-full hover:scale-125 transition-all`}
+						className={`flex items-center justify-center ${bg} h-11 w-11 rounded-full transition-all hover:scale-125`}
+						aria-label={label}
 					>
 						<Icon color={color} size='25px' />
 					</a>
@@ -26,7 +27,7 @@ export default function Work() {
 				href='/resume.pdf'
 				target='_blank'
 				rel='noopener noreferrer'
-				className='text-white rounded-md bg-gradient-to-l from-[#2B161D] to-[#1E1C32] py-[13px] px-[22px] font-medium leading-[1.1]'
+				className='rounded-md bg-gradient-to-l from-[#2B161D] to-[#1E1C32] px-[22px] py-[13px] font-medium leading-[1.1] text-white'
 			>
 				See My Resume
 			</a>
