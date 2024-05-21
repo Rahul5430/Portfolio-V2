@@ -1,17 +1,14 @@
 import Link from 'next/link';
 
-import Footer from '@/components/Footer';
 import Contact from '@/components/Home/Contact';
 import Me from '@/components/Home/Me';
-import Navbar from '@/components/Navbar';
 import WorkCards from '@/components/Work/WorkCards';
 
 export default function Home() {
 	return (
 		<>
-			<Navbar />
 			<Me />
-			<div className='flex-main flex-col gap-2.5'>
+			<div className='flex-main w-full flex-col gap-2.5'>
 				<div className='flex-main w-full justify-between px-4'>
 					<div className='h-auto w-auto whitespace-pre outline-none'>
 						<h3 className='text-sm font-semibold uppercase tracking-[3px] text-[#72788899] max-tablet:text-xs'>
@@ -32,7 +29,6 @@ export default function Home() {
 				<WorkCards threshold={0.4} />
 			</div>
 			<Contact />
-			<Footer />
 		</>
 	);
 }

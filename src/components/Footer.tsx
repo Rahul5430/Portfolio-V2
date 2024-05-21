@@ -1,3 +1,6 @@
+import Image from 'next/image';
+
+import Underline from '@/assets/underline.svg';
 import { socialLinks } from '@/data/links';
 
 const Footer = () => (
@@ -6,7 +9,7 @@ const Footer = () => (
 			<div className='flex-main w-min flex-col justify-center gap-3'>
 				<div className='flex w-auto flex-col justify-start whitespace-pre opacity-50 outline-none'>
 					<p className='text-base font-medium text-[#72788899]'>
-						@rahul5430 {new Date().getFullYear()}
+						©rahul5430 <span>✦</span> {new Date().getFullYear()}
 					</p>
 				</div>
 				<div className='flex-main w-min items-start justify-start gap-4'>
@@ -29,11 +32,22 @@ const Footer = () => (
 					))}
 				</div>
 			</div>
-			<div className='flex-main h-4 w-min justify-center gap-2 opacity-20'>
-				<div className='flex h-auto w-auto flex-none flex-col justify-start whitespace-pre opacity-100 outline-none'>
-					<p className='text-xs font-medium text-white/60'>
-						Made with &#128153;(and Nextjs) by Rahul Sharma
+			<div className='flex-main h-4 justify-center gap-2 opacity-20'>
+				<div className='flex flex-row items-center justify-center whitespace-pre opacity-100 outline-none max-tablet:scale-[0.8]'>
+					<Image
+						src={Underline}
+						alt='underline'
+						className='opacity-40'
+						style={{ transform: 'scale(-1,1)' }}
+					/>
+					<p className='px-3 text-sm font-medium text-white/60'>
+						stay hungry, stay foolish
 					</p>
+					<Image
+						src={Underline}
+						alt='underline'
+						className='opacity-40'
+					/>
 				</div>
 			</div>
 		</div>

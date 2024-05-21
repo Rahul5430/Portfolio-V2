@@ -7,6 +7,8 @@ import React from 'react';
 
 import BG_BOTTOM from '@/assets/bg_bottom.webp';
 import BG_TOP from '@/assets/bg_top.webp';
+import Navbar from '@/components/elements/Navbar';
+import Footer from '@/components/Footer';
 
 const inter = Inter({ subsets: ['latin'] });
 
@@ -17,14 +19,18 @@ export const metadata: Metadata = {
 
 export default function RootLayout({
 	children,
-}: {
+}: Readonly<{
 	children: React.ReactNode;
-}) {
+}>) {
 	return (
 		<html lang='en'>
 			<body className={inter.className}>
 				<div className='body-container'>
-					<div className='main-container'>{children}</div>
+					<div className='main-container'>
+						<Navbar />
+						{children}
+						<Footer />
+					</div>
 					<div className='absolute -bottom-[100px] h-auto w-desktop max-w-desktop flex-none animate-fadeAnim'>
 						<Image
 							alt='Gradient Background'

@@ -1,5 +1,3 @@
-import Footer from '@/components/Footer';
-import Navbar from '@/components/Navbar';
 import PageHeader from '@/components/PageHeader';
 import { contactLinks } from '@/data/links';
 import pageData from '@/data/pages';
@@ -7,7 +5,6 @@ import pageData from '@/data/pages';
 export default function Work() {
 	return (
 		<>
-			<Navbar />
 			<PageHeader data={pageData.contact} />
 			<div className='flex flex-row items-center justify-center gap-4'>
 				{contactLinks.map(({ Icon, label, href, color, bg }) => (
@@ -31,7 +28,6 @@ export default function Work() {
 			>
 				See My Resume
 			</a>
-			<Footer />
 		</>
 	);
 }

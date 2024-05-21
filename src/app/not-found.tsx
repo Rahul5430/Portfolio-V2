@@ -2,7 +2,7 @@ import Link from 'next/link';
 
 export default function NotFound() {
 	return (
-		<div className='flex-main z-[2] -my-6 h-[970px] w-708 flex-col justify-center gap-[9px] px-5 pb-[400px] pt-[200px] max-tablet:-mt-2 max-tablet:h-min max-tablet:w-full max-tablet:gap-[11px] max-tablet:pb-[300px]'>
+		<div className='flex-main z-[2] w-708 flex-1 flex-col justify-center gap-[9px] max-tablet:h-min max-tablet:w-full max-tablet:gap-[11px]'>
 			<h1 className='gradient-text text-[220px] font-bold leading-[100%] -tracking-[.67px] max-tablet:text-[120px]'>
 				404
 			</h1>

@@ -15,7 +15,7 @@
 	}
 
 	.main-container {
-		@apply z-[2] flex h-min w-708 flex-initial shrink-0 flex-col flex-nowrap items-center justify-start gap-8 overflow-hidden py-6 max-tablet:w-full max-tablet:p-2;
+		@apply z-[2] flex h-min min-h-screen w-708 flex-initial shrink-0 flex-col flex-nowrap items-center justify-start gap-8 overflow-hidden py-6 max-tablet:w-full max-tablet:p-2;
 	}
 
 	.hover-underline {

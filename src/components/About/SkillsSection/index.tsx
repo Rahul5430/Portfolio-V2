@@ -1,6 +1,8 @@
+import dynamic from 'next/dynamic';
+
 import skills from '@/data/skills';
 
-import Skill from './Skill';
+const Skill = dynamic(() => import('./Skill'), { ssr: false });
 
 const SkillsSection = () => (
 	<div className='flex flex-col items-center justify-center'>

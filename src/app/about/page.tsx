@@ -2,15 +2,12 @@ import Image from 'next/image';
 
 import profilePic from '@/assets/rahul.JPG';
 import SkillsSection from '@/components/About/SkillsSection';
-import Footer from '@/components/Footer';
-import Navbar from '@/components/Navbar';
 import PageHeader from '@/components/PageHeader';
 import pageData from '@/data/pages';
 
 export default function Work() {
 	return (
 		<>
-			<Navbar />
 			<PageHeader data={pageData.about} />
 			<div className='flex flex-row items-center justify-evenly p-4 max-tablet:flex-col-reverse'>
 				<p className='speech-bubble'>
@@ -29,7 +26,6 @@ export default function Work() {
 				/>
 			</div>
 			<SkillsSection />
-			<Footer />
 		</>
 	);
 }
