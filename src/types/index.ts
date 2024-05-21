@@ -17,3 +17,11 @@ export type WorkType = {
 	companyUrl: string;
 	imageUrl: StaticImport;
 };
+
+export type SkillsType = {
+	label: string;
+	url: string;
+	imageUrl: StaticImport;
+	percentage: number;
+	customBg?: string;
+};

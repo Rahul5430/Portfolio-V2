@@ -1,6 +1,7 @@
 import Image from 'next/image';
 
 import profilePic from '@/assets/rahul.JPG';
+import SkillsSection from '@/components/About/SkillsSection';
 import Footer from '@/components/Footer';
 import Navbar from '@/components/Navbar';
 import PageHeader from '@/components/PageHeader';
@@ -27,6 +28,7 @@ export default function Work() {
 					priority
 				/>
 			</div>
+			<SkillsSection />
 			<Footer />
 		</>
 	);
