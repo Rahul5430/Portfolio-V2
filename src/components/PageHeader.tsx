@@ -1,6 +1,7 @@
 import Image from 'next/image';
 
-import StarUnderline from '@/assets/star_underline.svg';
+import ThreeDots from '@/assets/three-dots.svg';
+import Underline from '@/assets/underline.svg';
 
 interface PageHeaderProps {
 	title: string;
@@ -26,12 +27,21 @@ const PageHeader = ({ data }: { data: PageHeaderProps }) => {
 					{about}
 				</h3>
 			</div>
-			<div className='h-5 w-[332px]'>
+			<div className='flex items-center justify-center'>
 				<Image
-					src={StarUnderline}
-					alt={title}
-					className='h-full w-full'
+					src={Underline}
+					alt='underline'
+					className='opacity-20'
+					style={{ transform: 'scale(-1,1)' }}
 				/>
+				<span>
+					<Image
+						src={ThreeDots}
+						alt='stars'
+						className='mx-6 invert-[1]'
+					/>
+				</span>
+				<Image src={Underline} alt='underline' className='opacity-20' />
 			</div>
 		</div>
 	);

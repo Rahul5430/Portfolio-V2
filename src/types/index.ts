@@ -13,7 +13,6 @@ export type WorkType = {
 	duration: string;
 	description: string[];
 	about: string;
-	url: string;
 	companyUrl: string;
 	imageUrl: StaticImport;
 };
