@@ -2,6 +2,8 @@
 
 import Image from 'next/image';
 import { useEffect, useRef, useState } from 'react';
+import { BiLink } from 'react-icons/bi';
+import { VscGithubInverted } from 'react-icons/vsc';
 import { useInView } from 'react-intersection-observer';
 
 import useWindowSize from '@/hooks/useWindowSize';
@@ -74,7 +76,7 @@ const Card = ({
 		>
 			<div
 				ref={cardRef}
-				className={`group relative flex flex-1 cursor-pointer flex-row items-start justify-start gap-0 overflow-hidden rounded-2xl p-3 pb-4 transition-all duration-500 max-tablet:flex-row max-tablet:items-center ${isActive || allActive ? 'gap-2' : ''}`}
+				className={`group relative flex flex-1 flex-row items-start justify-start gap-0 overflow-hidden rounded-2xl p-3 pb-4 transition-all duration-500 max-tablet:flex-row ${isActive || allActive ? 'cursor-default gap-2' : 'cursor-pointer'}`}
 				onClick={onClick}
 				role='button'
 				tabIndex={0}
@@ -116,18 +118,64 @@ const Card = ({
 						</div>
 					</div>
 				</div>
-				<ul
-					className={`z-[9] list-disc px-5 py-2.5 transition-[opacity,transform] duration-1000 ${isActive || allActive ? 'translate-x-0 scale-100 opacity-100' : 'hidden -translate-x-full scale-0 opacity-0'}`}
+				<div
+					className={`flex flex-col px-5 transition-[opacity,transform] ${isActive || allActive ? 'translate-x-0 scale-100 opacity-100' : 'hidden -translate-x-full scale-0 opacity-0'}`}
 				>
-					{data.description.map((item) => (
-						<li
-							key={item}
-							className={`text-base font-medium leading-[120%] -tracking-[0.11px] text-[#ECEDEE] max-tablet:text-[15px] ${(isActive || allActive) && isMobile ? '!text-[13px]' : ''}`}
-						>
-							{item}
-						</li>
-					))}
-				</ul>
+					<p className='z-10 pt-2 text-sm font-medium italic leading-[120%] -tracking-[0.11px] text-[#ECEDEE] opacity-[.55] max-tablet:pb-2 max-tablet:pt-0 max-tablet:text-xs'>
+						{data.about}
+					</p>
+					<ul className='z-[9] list-disc py-2.5 duration-1000 max-tablet:pb-2 max-tablet:pt-0'>
+						{data.description.map((item) => (
+							<li
+								key={item}
+								className={`text-base font-medium leading-[120%] -tracking-[0.11px] text-[#ECEDEE] max-tablet:text-[15px] ${(isActive || allActive) && isMobile ? '!text-[13px]' : ''}`}
+							>
+								{item}
+							</li>
+						))}
+					</ul>
+					<div className='z-10 flex flex-row items-center gap-4 text-base font-medium leading-[120%] -tracking-[0.11px] text-[#ECEDEE] max-tablet:gap-2 max-tablet:text-[13px]'>
+						Tech Stack:
+						{data.technologies.map(({ label, icon, customBg }) => (
+							<div
+								key={`${data.workplace}-${label}`}
+								className={`${customBg} flex h-9 w-9 items-center justify-center rounded-lg max-tablet:h-8 max-tablet:w-8`}
+							>
+								<Image
+									src={icon}
+									alt={label}
+									className='h-[30px] w-auto max-tablet:h-[25px]'
+								/>
+							</div>
+						))}
+					</div>
+					<div className='z-10 flex flex-row items-center py-2 text-base font-medium leading-[120%] -tracking-[0.11px] text-[#ECEDEE] max-tablet:py-0.5 max-tablet:text-[13px]'>
+						Links:
+						{data.links.map(({ label, url }) => (
+							<a
+								className='flex h-9 w-9 items-center justify-center rounded-lg pl-2 max-tablet:h-8 max-tablet:w-8'
+								key={`${data.workplace}-${label}`}
+								target='_blank'
+								rel='noreferrer'
+								href={url}
+								onClick={(e) => e.stopPropagation()}
+							>
+								{label === 'GitHub' && (
+									<VscGithubInverted
+										color='#ECEDEE'
+										className='h-[30px] w-auto max-tablet:h-[25px]'
+									/>
+								)}
+								{label === 'Website' && (
+									<BiLink
+										color='#ECEDEE'
+										className='h-[30px] w-auto max-tablet:h-[25px]'
+									/>
+								)}
+							</a>
+						))}
+					</div>
+				</div>
 			</div>
 		</div>
 	);

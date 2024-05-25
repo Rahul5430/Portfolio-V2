@@ -13,8 +13,16 @@ export type WorkType = {
 	duration: string;
 	description: string[];
 	about: string;
-	companyUrl: string;
 	imageUrl: StaticImport;
+	links: {
+		label: 'GitHub' | 'Website';
+		url: string;
+	}[];
+	technologies: {
+		label: string;
+		icon: StaticImport;
+		customBg?: string;
+	}[];
 };
 
 export type SkillsType = {

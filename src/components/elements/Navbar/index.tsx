@@ -4,7 +4,7 @@ import dynamic from 'next/dynamic';
 import Image from 'next/image';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
-import { useEffect, useState } from 'react';
+import { useEffect, useRef, useState } from 'react';
 
 import logo from '@/assets/white.png';
 import { socialLinks } from '@/data/links';
@@ -21,6 +21,8 @@ const Navbar = () => {
 
 	const [isMobileNavOpen, setIsMobileNavOpen] = useState(false);
 
+	const navRef = useRef<HTMLDivElement>(null);
+
 	useEffect(() => {
 		if (width && width > 809 && isMobileNavOpen) {
 			setIsMobileNavOpen(false);
@@ -34,8 +36,38 @@ const Navbar = () => {
 		// eslint-disable-next-line react-hooks/exhaustive-deps
 	}, [pathname]);
 
+	useEffect(() => {
+		const handleClickOutside = (event: MouseEvent) => {
+			if (
+				navRef.current &&
+				!navRef.current.contains(event.target as Node)
+			) {
+				setIsMobileNavOpen(false);
+			}
+		};
+
+		if (isMobileNavOpen) {
+			document.addEventListener('mousedown', handleClickOutside);
+		} else {
+			document.removeEventListener('mousedown', handleClickOutside);
+		}
+
+		return () => {
+			document.removeEventListener('mousedown', handleClickOutside);
+		};
+	}, [isMobileNavOpen]);
+
+	const handleLinkClick = () => {
+		if (isMobileNavOpen) {
+			setIsMobileNavOpen(false);
+		}
+	};
+
 	return (
-		<div className='flex-main relative w-full flex-col justify-center max-tablet:overflow-visible max-tablet:p-3'>
+		<div
+			ref={navRef}
+			className='flex-main relative w-full flex-col justify-center max-tablet:overflow-visible max-tablet:p-3'
+		>
 			<div className='max-tablet:flex-main relative h-[54.19px] w-full flex-none overflow-visible max-tablet:z-[2] max-tablet:h-[54.19px] max-tablet:items-start max-tablet:justify-center'>
 				<div
 					className={`flex-main w-full justify-between rounded-xl bg-[#1C162F66] p-4 ${
@@ -52,13 +84,14 @@ const Navbar = () => {
 						}`}
 					>
 						<div className='h-auto w-7'>
-							<Link href='/'>
+							<Link href='/' onClick={handleLinkClick}>
 								<Image src={logo} alt='Logo' />
 							</Link>
 						</div>
 						<NavButtons
 							isMobileNavOpen={isMobileNavOpen}
 							width={width}
+							handleLinkClick={handleLinkClick}
 						/>
 					</div>
 					<div className='flex-main justify-start gap-3'>

@@ -2,7 +2,7 @@
 
 import { useState } from 'react';
 
-import workData from '@/data/work';
+import { freelancingData, internshipsData, openSourceData } from '@/data/work';
 
 import Card from './Card';
 
@@ -80,7 +80,47 @@ const WorkCards = ({ threshold = 0.7 }) => {
 			<div className='pb-10 max-tablet:w-full max-tablet:p-0'>
 				<div className='w-708 p-1 max-tablet:w-full max-tablet:pb-[72px]'>
 					<div className='grid grid-flow-row-dense auto-rows-fr grid-cols-3 justify-center gap-3.5 max-tablet:auto-rows-auto max-tablet:grid-cols-[repeat(1,_minmax(200px,_1fr))] max-tablet:gap-3'>
-						{workData.map((work, index) => (
+						{internshipsData.map((work, index) => (
+							<Card
+								key={work.workplace}
+								index={index}
+								data={work}
+								threshold={threshold}
+								isActive={activeCard === index}
+								allActive={allActive}
+								onClick={() => handleOnClick(index)}
+							/>
+						))}
+					</div>
+				</div>
+			</div>
+			<h3 className='mt-6 text-sm font-semibold uppercase tracking-[3px] text-[#72788899] max-tablet:text-xs'>
+				Freelancing
+			</h3>
+			<div className='pb-10 max-tablet:w-full max-tablet:p-0'>
+				<div className='w-708 p-1 max-tablet:w-full max-tablet:pb-[72px]'>
+					<div className='grid grid-flow-row-dense auto-rows-fr grid-cols-3 justify-center gap-3.5 max-tablet:auto-rows-auto max-tablet:grid-cols-[repeat(1,_minmax(200px,_1fr))] max-tablet:gap-3'>
+						{freelancingData.map((work, index) => (
+							<Card
+								key={work.workplace}
+								index={index}
+								data={work}
+								threshold={threshold}
+								isActive={activeCard === index}
+								allActive={allActive}
+								onClick={() => handleOnClick(index)}
+							/>
+						))}
+					</div>
+				</div>
+			</div>
+			<h3 className='mt-6 text-sm font-semibold uppercase tracking-[3px] text-[#72788899] max-tablet:text-xs'>
+				Open-Source
+			</h3>
+			<div className='pb-10 max-tablet:w-full max-tablet:p-0'>
+				<div className='w-708 p-1 max-tablet:w-full max-tablet:pb-[72px]'>
+					<div className='grid grid-flow-row-dense auto-rows-fr grid-cols-3 justify-center gap-3.5 max-tablet:auto-rows-auto max-tablet:grid-cols-[repeat(1,_minmax(200px,_1fr))] max-tablet:gap-3'>
+						{openSourceData.map((work, index) => (
 							<Card
 								key={work.workplace}
 								index={index}

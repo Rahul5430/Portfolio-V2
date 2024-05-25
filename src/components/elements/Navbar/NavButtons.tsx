@@ -5,9 +5,11 @@ import { navLinks } from '@/data/links';
 const NavButtons = ({
 	isMobileNavOpen,
 	width,
+	handleLinkClick,
 }: {
 	isMobileNavOpen: boolean;
 	width: number | undefined;
+	handleLinkClick: () => void;
 }) => {
 	let className = '';
 	if ((width && width > 809) || isMobileNavOpen) {
@@ -25,6 +27,7 @@ const NavButtons = ({
 					key={label}
 					href={href}
 					className='relative cursor-pointer no-underline'
+					onClick={handleLinkClick}
 				>
 					<p className='hover-underline text-base font-medium text-bright-gray outline-none'>
 						{label}
