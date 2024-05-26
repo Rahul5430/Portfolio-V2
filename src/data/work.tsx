@@ -1,4 +1,5 @@
 import Angular from '@/assets/icons/angular-icon-1.svg';
+import Firebase from '@/assets/icons/firebase.svg';
 import Flask from '@/assets/icons/flask.svg';
 import Javascript from '@/assets/icons/javascript.svg';
 import MongoDB from '@/assets/icons/mongodb.svg';
@@ -7,11 +8,15 @@ import NodeJS from '@/assets/icons/nodejs.svg';
 import Python from '@/assets/icons/python-5.svg';
 import ReactNative from '@/assets/icons/react-native-1.svg';
 import ReactJS from '@/assets/icons/reactjs.svg';
+import Redux from '@/assets/icons/redux.svg';
 import SocketIO from '@/assets/icons/socket-io.svg';
 import ACM from '@/assets/logos/acm_background.png';
 import Foxmula from '@/assets/logos/foxmula_background.png';
+import GamiLearn from '@/assets/logos/gamilearn_background.png';
 import ISB from '@/assets/logos/indianstreetbets_background.png';
+import LeadGPT from '@/assets/logos/leadgpt_background.png';
 import Padhakku from '@/assets/logos/padhakku_background.png';
+import QWriter from '@/assets/logos/qwriter_background.png';
 import StockBets from '@/assets/logos/stockbets_background.png';
 import XEAM from '@/assets/logos/xeam_background.png';
 import { WorkType } from '@/types';
@@ -101,8 +106,58 @@ const internshipsData: WorkType[] = [
 
 const freelancingData: WorkType[] = [
 	{
+		workplace: 'QWriter',
+		position: 'Freelancer Full-Stack Developer',
+		duration: 'Apr 2024 - May 2024',
+		description: [
+			'Recreated a ReactJS website using Next.js, significantly improving speed and performance.',
+			'Implemented AI-powered features allowing users to chat with OpenAI and ChatGPT to construct stories, receive outlines, vocabulary suggestions, and grammar feedback.',
+		],
+		about: 'QWriter is a cutting-edge platform that empowers users to create stories on any topic with the help of AI. Our advanced tools, including chat functionalities with OpenAI and ChatGPT, provide users with outlines, vocabulary enhancements, and grammar feedback to ensure their stories are compelling and well-crafted.',
+		imageUrl: QWriter,
+		links: [{ label: 'Website', url: 'https://qwriter.vercel.app/' }],
+		technologies: [
+			{ label: 'NextJS', icon: NextJS },
+			{ label: 'Redux', icon: Redux },
+		],
+	},
+	{
+		workplace: 'GamiLearn',
+		position: 'Freelancer Full-Stack Developer',
+		duration: 'Mar 2024 - Apr 2024',
+		description: [
+			'Engineered an interactive gaming website using Next.js and Node.js, enabling users to play against a bot or in 1v1 multiplayer games.',
+			'Utilized Socket.io for real-time communication and integrated OpenAI API to dynamically generate English grammar questions, enhancing user engagement and learning outcomes.',
+		],
+		about: 'Gamilearn is an innovative edtech startup that combines gaming with learning to make education fun and engaging. Our platform allows users to play educational games focused on school-level English grammar, fostering a competitive and interactive learning environment.',
+		imageUrl: GamiLearn,
+		links: [{ label: 'Website', url: 'https://gami-learn.com/' }],
+		technologies: [
+			{ label: 'NextJS', icon: NextJS },
+			{ label: 'NodeJS', icon: NodeJS },
+			{ label: 'SocketIO', icon: SocketIO },
+		],
+	},
+	{
+		workplace: 'LeadGPT',
+		position: 'Freelancer Backend Developer',
+		duration: 'Apr 2024 - May 2024',
+		description: [
+			'Reconstructed the backend using MVC architecture, significantly reducing API response times and improving system scalability.',
+			'Created and optimized prompts for the OpenAI API, enhancing both system efficiency and user experience with more accurate responses.',
+		],
+		// eslint-disable-next-line quotes
+		about: "Unlock your business's full potential with Lead GPT's advanced analytics and bespoke solutions. Our tools are designed to adapt and scale with your evolving needs, ensuring you stay ahead in a competitive landscape.",
+		imageUrl: LeadGPT,
+		links: [{ label: 'Website', url: 'https://leadgpt.org/' }],
+		technologies: [
+			{ label: 'NodeJS', icon: NodeJS },
+			{ label: 'Firebase', icon: Firebase },
+		],
+	},
+	{
 		workplace: 'StockBets',
-		position: 'CO-CTO',
+		position: 'CTO',
 		duration: 'Sep 2023 - Present',
 		description: [
 			'Collaborated with clients to deliver tailored software solutions and worked with cross-functional teams to ensure seamless development.',

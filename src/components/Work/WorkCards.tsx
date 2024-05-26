@@ -7,14 +7,17 @@ import { freelancingData, internshipsData, openSourceData } from '@/data/work';
 import Card from './Card';
 
 const WorkCards = ({ threshold = 0.7 }) => {
-	const [activeCard, setActiveCard] = useState<number | null>(null);
+	const [activeCard, setActiveCard] = useState(-1);
 	const [allActive, setAllActive] = useState(false);
+
+	const freelancingDataOffset = internshipsData.length;
+	const openSourceDataOffset = freelancingDataOffset + freelancingData.length;
 
 	const activeButtonClassName =
 		'text-white bg-[#F06844] bg-gradient-to-r from-[#F7BE2B] to-[#F537F9]';
 
 	const handleOnClick = (index: number) => {
-		setActiveCard(activeCard === index ? null : index);
+		setActiveCard(activeCard === index ? -1 : index);
 	};
 
 	return (
@@ -106,9 +109,13 @@ const WorkCards = ({ threshold = 0.7 }) => {
 								index={index}
 								data={work}
 								threshold={threshold}
-								isActive={activeCard === index}
+								isActive={
+									activeCard - freelancingDataOffset === index
+								}
 								allActive={allActive}
-								onClick={() => handleOnClick(index)}
+								onClick={() =>
+									handleOnClick(freelancingDataOffset + index)
+								}
 							/>
 						))}
 					</div>
@@ -126,9 +133,13 @@ const WorkCards = ({ threshold = 0.7 }) => {
 								index={index}
 								data={work}
 								threshold={threshold}
-								isActive={activeCard === index}
+								isActive={
+									activeCard - openSourceDataOffset === index
+								}
 								allActive={allActive}
-								onClick={() => handleOnClick(index)}
+								onClick={() =>
+									handleOnClick(openSourceDataOffset + index)
+								}
 							/>
 						))}
 					</div>
