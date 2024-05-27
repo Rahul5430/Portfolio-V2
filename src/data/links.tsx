@@ -14,12 +14,12 @@ export const navLinks: NavLink[] = [
 		href: 'work',
 	},
 	{
-		label: 'About',
-		href: 'about',
-	},
-	{
 		label: 'Projects',
 		href: 'projects',
+	},
+	{
+		label: 'About',
+		href: 'about',
 	},
 	{
 		label: 'Contact',

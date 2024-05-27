@@ -1,4 +1,5 @@
 import Angular from '@/assets/icons/angular-icon-1.svg';
+import Arduino from '@/assets/icons/arduino.svg';
 import AWS from '@/assets/icons/aws.svg';
 import CPP from '@/assets/icons/c.svg';
 import CSS from '@/assets/icons/css3.svg';
@@ -9,7 +10,9 @@ import Git from '@/assets/icons/git.svg';
 import HTML from '@/assets/icons/html.svg';
 import Ionic from '@/assets/icons/ionicframework-icon.svg';
 import Javascript from '@/assets/icons/javascript.svg';
+import MUI from '@/assets/icons/material-ui-1.svg';
 import MongoDB from '@/assets/icons/mongodb.svg';
+import MySQL from '@/assets/icons/mysql-official.svg';
 import NextJS from '@/assets/icons/nextdotjs.svg';
 import NodeJS from '@/assets/icons/nodejs.svg';
 import Python from '@/assets/icons/python-5.svg';
@@ -17,6 +20,7 @@ import ReactNative from '@/assets/icons/react-native-1.svg';
 import ReactJS from '@/assets/icons/reactjs.svg';
 import Redux from '@/assets/icons/redux.svg';
 import SocketIO from '@/assets/icons/socket-io.svg';
+import TailwindCSS from '@/assets/icons/tailwindcss.svg';
 import Typescript from '@/assets/icons/typescript.svg';
 import { SkillsType } from '@/types';
 
@@ -101,6 +105,24 @@ const skills: SkillsType[] = [
 		percentage: 100,
 	},
 	{
+		label: 'MySQL',
+		url: 'https://www.mysql.com',
+		imageUrl: MySQL,
+		percentage: 90,
+	},
+	{
+		label: 'TailwindCSS',
+		url: 'https://tailwindcss.com',
+		imageUrl: TailwindCSS,
+		percentage: 100,
+	},
+	{
+		label: 'MUI',
+		url: 'https://mui.com',
+		imageUrl: MUI,
+		percentage: 100,
+	},
+	{
 		label: 'HTML',
 		url: 'https://en.wikipedia.org/wiki/HTML',
 		imageUrl: HTML,
@@ -141,6 +163,12 @@ const skills: SkillsType[] = [
 		url: 'https://www.python.org/',
 		imageUrl: Python,
 		percentage: 100,
+	},
+	{
+		label: 'Arduino',
+		url: 'https://www.arduino.cc',
+		imageUrl: Arduino,
+		percentage: 50,
 	},
 ];
 

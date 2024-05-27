@@ -32,3 +32,19 @@ export type SkillsType = {
 	percentage: number;
 	customBg?: string;
 };
+
+export type ProjectType = {
+	name: string;
+	duration: string;
+	description: string[];
+	imageUrl: StaticImport;
+	links: {
+		label: 'GitHub' | 'Website';
+		url: string;
+	}[];
+	technologies: {
+		label: string;
+		icon: StaticImport;
+		customBg?: string;
+	}[];
+};

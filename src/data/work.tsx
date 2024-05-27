@@ -10,12 +10,14 @@ import ReactNative from '@/assets/icons/react-native-1.svg';
 import ReactJS from '@/assets/icons/reactjs.svg';
 import Redux from '@/assets/icons/redux.svg';
 import SocketIO from '@/assets/icons/socket-io.svg';
+import TailwindCSS from '@/assets/icons/tailwindcss.svg';
 import ACM from '@/assets/logos/acm_background.png';
 import Foxmula from '@/assets/logos/foxmula_background.png';
 import GamiLearn from '@/assets/logos/gamilearn_background.png';
 import ISB from '@/assets/logos/indianstreetbets_background.png';
 import LeadGPT from '@/assets/logos/leadgpt_background.png';
 import Padhakku from '@/assets/logos/padhakku_background.png';
+import PWoC from '@/assets/logos/pwoc_background.png';
 import QWriter from '@/assets/logos/qwriter_background.png';
 import StockBets from '@/assets/logos/stockbets_background.png';
 import XEAM from '@/assets/logos/xeam_background.png';
@@ -196,6 +198,26 @@ const openSourceData: WorkType[] = [
 			{ label: 'NextJS', icon: NextJS },
 			{ label: 'ReactJS', icon: ReactJS },
 			{ label: 'NodeJS', icon: NodeJS },
+		],
+	},
+	{
+		workplace: 'PWoC',
+		position: 'Open Source Developer & Mentor',
+		duration: 'Jan 2023 - Mar 2023',
+		description: [
+			'Led the development of the PWoC (PEC Winter of Code) website using Next.js and TailwindCSS, providing a user-friendly interface for open-source learning.',
+			'Mentored students participating in the PEC Winter of Code program, guiding them through project development, code reviews, and best practices.',
+			'Initiated and organized workshops and sessions to facilitate skill development and collaboration among participants, fostering a vibrant open-source community.',
+		],
+		about: 'PEC Winter of Code is an open source program initiated by PEC ACM CSS to promote the culture of open source by providing a beginner friendly platform where one can learn and grow under the guidance of experienced developers.',
+		imageUrl: PWoC,
+		links: [
+			{ label: 'Website', url: 'https://pwoc.vercel.app' },
+			{ label: 'GitHub', url: 'https://github.com/Rahul5430/PWoC' },
+		],
+		technologies: [
+			{ label: 'NextJS', icon: NextJS },
+			{ label: 'TailwindCSS', icon: TailwindCSS },
 		],
 	},
 ];
