@@ -25,14 +25,6 @@ export type WorkType = {
 	}[];
 };
 
-export type SkillsType = {
-	label: string;
-	url: string;
-	imageUrl: StaticImport;
-	percentage: number;
-	customBg?: string;
-};
-
 export type ProjectType = {
 	name: string;
 	duration: string;
@@ -47,4 +39,12 @@ export type ProjectType = {
 		icon: StaticImport;
 		customBg?: string;
 	}[];
+};
+
+export type SkillsType = {
+	label: string;
+	url: string;
+	imageUrl: StaticImport;
+	percentage: number;
+	customBg?: string;
 };

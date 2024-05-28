@@ -2,19 +2,19 @@
 const pageData = {
 	work: {
 		title: 'Work',
-		about: "It has been an absolute pleasure to put my heart and soul into these projects. While you're here, browse these projects",
+		about: 'I have worked with many evolving startups and some well established companies. I love organizing events and that is why I am also involved with many open-source communities as a representative.',
 		gradientFrom: 'from-[#8C2CE3]',
 		gradientTo: 'to-[#FF2496]',
 	},
 	about: {
 		title: 'About',
-		about: "It's not that difficult to find my contact information by searching rahul5430. Know little more about me here''",
+		about: "It's not that difficult to find my contact information by searching rahul5430. Know little more about me here",
 		gradientFrom: 'from-[#4AB1F1]',
 		gradientTo: 'to-[#FF7B50]',
 	},
 	projects: {
 		title: 'Projects',
-		about: "It's not that difficult to find my contact information by searching rahul5430. Know little more about me here",
+		about: "It has been an absolute pleasure to put my heart and soul into these projects. While you're here, browse these projects",
 		gradientFrom: 'from-[#4AB1F1]',
 		gradientTo: 'to-[#D749AF]',
 	},

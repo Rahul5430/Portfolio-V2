@@ -17,7 +17,16 @@ import ReactJS from '@/assets/icons/reactjs.svg';
 import SocketIO from '@/assets/icons/socket-io.svg';
 import TailwindCSS from '@/assets/icons/tailwindcss.svg';
 import Typescript from '@/assets/icons/typescript.svg';
-import ACM from '@/assets/logos/acm_background.png';
+import GVDS from '@/assets/projects/gvds.png';
+import KeeperApp from '@/assets/projects/keeper-app.png';
+import Portfolio from '@/assets/projects/portfolio.png';
+import SERSystem from '@/assets/projects/ser-system.png';
+import StockWatchlist from '@/assets/projects/stock-watchlist.png';
+import StrokeNet from '@/assets/projects/strokenet.png';
+import TicTacToe from '@/assets/projects/tic-tac-toe.png';
+import ToDoList from '@/assets/projects/to-do-list.png';
+import WeatherApp from '@/assets/projects/weather-app.png';
+import Weave from '@/assets/projects/weave.png';
 import { ProjectType } from '@/types';
 
 const projects: ProjectType[] = [
@@ -29,7 +38,7 @@ const projects: ProjectType[] = [
 			'Utilized Next.js, Tailwind CSS, and TypeScript to build a fast, scalable, and maintainable site.',
 			'Designed a modern, responsive UI and implemented interactive features to enhance user engagement.',
 		],
-		imageUrl: ACM,
+		imageUrl: Portfolio,
 		links: [
 			{ label: 'Website', url: 'https://rahulsharma.vercel.app' },
 			{
@@ -51,7 +60,7 @@ const projects: ProjectType[] = [
 			'Implemented a comprehensive system comprising a website, Android app, and iPhone app, providing access to patient records and facilitating quick action.',
 			'Utilized Ionic, Angular, and TypeScript for frontend development, and Node.js with TypeScript for backend. Communication handled via Socket.IO, with Firebase used for stroke alert notifications.',
 		],
-		imageUrl: ACM,
+		imageUrl: StrokeNet,
 		links: [
 			{
 				label: 'Website',
@@ -84,7 +93,7 @@ const projects: ProjectType[] = [
 			'Implemented wireless transmission of vibration data, a pioneering feat in the field, using Arduino hardware.',
 			'Utilized Next.js, Tailwind CSS, and TypeScript for frontend development, and Node.js with TypeScript for backend. Communication between frontend, backend, and hardware facilitated via Socket.IO.',
 		],
-		imageUrl: ACM,
+		imageUrl: GVDS,
 		links: [
 			{
 				label: 'GitHub',
@@ -112,7 +121,7 @@ const projects: ProjectType[] = [
 			'Developed a dynamic conference website using Next.js and Tailwind CSS, ensuring a responsive and user-friendly interface.',
 			'Implemented features to facilitate networking, showcase innovations, and enhance user engagement with interactive elements and optimized performance.',
 		],
-		imageUrl: ACM,
+		imageUrl: Weave,
 		links: [
 			{ label: 'Website', url: 'https://pec-conference.vercel.app' },
 			{ label: 'GitHub', url: 'https://github.com/Rahul5430/conference' },
@@ -131,7 +140,7 @@ const projects: ProjectType[] = [
 			'This system finds applications in diverse fields like the medical industry or customer call centers, enabling sentiment analysis and enhancing customer service quality.',
 			'Built with React.js for the frontend, allowing users to upload audio files, and Flask for the backend. Additionally, an ML model has been trained to accurately classify emotions.',
 		],
-		imageUrl: ACM,
+		imageUrl: SERSystem,
 		links: [
 			{
 				label: 'Website',
@@ -155,7 +164,7 @@ const projects: ProjectType[] = [
 			'Users can easily search for indexes and add them to their watchlist, providing a convenient way to track their favorite stocks and investments.',
 			'As the maintainer of the codebase, I oversee the development and maintenance of the application, ensuring its stability and functionality.',
 		],
-		imageUrl: ACM,
+		imageUrl: StockWatchlist,
 		links: [
 			{
 				label: 'Website',
@@ -178,7 +187,7 @@ const projects: ProjectType[] = [
 			'A note-taking app built with React and Material-UI, providing CRUD operations for managing your notes.',
 			'Users can create, read, update, and delete any note as per their choice, with a user-friendly interface and seamless experience.',
 		],
-		imageUrl: ACM,
+		imageUrl: KeeperApp,
 		links: [
 			{
 				label: 'Website',
@@ -201,7 +210,7 @@ const projects: ProjectType[] = [
 			'A full-stack to-do list application built with Express and Node.js, offering CRUD operations for managing your tasks.',
 			'MongoDB is used as the database for proper storage of todos, allowing users to create, read, update, and delete any todo as per their choice.',
 		],
-		imageUrl: ACM,
+		imageUrl: ToDoList,
 		links: [
 			{
 				label: 'GitHub',
@@ -220,7 +229,7 @@ const projects: ProjectType[] = [
 			'This Weather App provides local and international weather forecasts using Express, Node.js, and the OpenWeatherMap API.',
 			'Featuring up-to-the-minute weather reports, users can stay informed about current weather conditions and forecasts.',
 		],
-		imageUrl: ACM,
+		imageUrl: WeatherApp,
 		links: [
 			{
 				label: 'GitHub',
@@ -237,7 +246,7 @@ const projects: ProjectType[] = [
 			'Players can choose to play against the computer or engage in a 1v1 match against each other, offering both single-player and multiplayer modes.',
 			'The game interface is completely responsive, ensuring seamless gameplay across various devices and screen sizes.',
 		],
-		imageUrl: ACM,
+		imageUrl: TicTacToe,
 		links: [
 			{
 				label: 'Website',
