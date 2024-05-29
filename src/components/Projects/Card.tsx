@@ -66,7 +66,7 @@ const Card = ({
 	return (
 		<div
 			ref={ref}
-			className={`relative mb-3.5 flex transition-all duration-1000 max-tablet:mb-0 ${isIntersecting ? 'transform-none opacity-100' : 'translate-y-20 opacity-0'} ${(isActive || allActive) && !isMobile ? 'col-span-3' : ''}`}
+			className={`relative mb-3.5 flex transition-all duration-500 max-tablet:mb-0 ${isIntersecting ? 'transform-none opacity-100' : 'translate-y-20 opacity-0'} ${(isActive || allActive) && !isMobile ? 'col-span-3' : ''}`}
 			style={{
 				gridRow:
 					!allActive && isActive && !isMobile
@@ -76,14 +76,11 @@ const Card = ({
 		>
 			<div
 				ref={cardRef}
-				className={`group relative flex flex-1 flex-row items-start justify-start gap-0 overflow-hidden rounded-2xl p-3 pb-4 transition-all duration-500 max-tablet:flex-row ${isActive || allActive ? 'cursor-default gap-2' : 'cursor-pointer'}`}
+				className={`relative flex flex-1 flex-row items-start justify-start gap-0 overflow-hidden rounded-2xl p-3 pb-4 transition-all duration-500 before:absolute before:-inset-[2px] before:z-0 before:scale-[.8] before:rounded-[20px] before:opacity-0 before:transition-all before:duration-[333ms] before:content-[""] hover:before:scale-100 hover:before:bg-gradient-to-r hover:before:from-[#1E1C3280] hover:before:to-[#2B161D8C] hover:before:opacity-100 max-tablet:flex-row ${isActive || allActive ? 'cursor-default gap-2 before:!scale-100 before:bg-gradient-to-r before:from-[#1E1C3280] before:to-[#2B161D8C] before:opacity-100' : 'cursor-pointer'}`}
 				onClick={onClick}
 				role='button'
 				tabIndex={0}
 			>
-				<div
-					className={`absolute inset-0 z-0 origin-[50%_50%_0px] rounded-[20px] bg-gradient-to-r from-[#1E1C3280] to-[#2B161D8C] opacity-0 transition-all duration-500 group-hover:opacity-100 ${isActive ? 'opacity-100' : ''}`}
-				/>
 				<div
 					className={`flex gap-2 ${isMobile && !isActive && !allActive ? 'flex-row items-center' : 'flex-col'}`}
 				>
