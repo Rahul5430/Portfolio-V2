@@ -11,11 +11,11 @@
 
 @layer components {
 	.body-container {
-		@apply relative flex h-min min-h-full w-auto flex-col flex-nowrap items-center gap-0 overflow-hidden bg-[#0A0A0D] p-0;
+		@apply relative flex w-auto flex-col items-center overflow-hidden bg-[#0A0A0D];
 	}
 
 	.main-container {
-		@apply z-[2] flex h-min min-h-screen w-708 flex-initial shrink-0 flex-col flex-nowrap items-center justify-start gap-8 overflow-hidden py-6 max-tablet:w-full max-tablet:p-2;
+		@apply z-[2] flex w-708 flex-col items-center justify-start gap-8 py-6 max-tablet:w-full max-tablet:p-2;
 	}
 
 	.hover-underline {

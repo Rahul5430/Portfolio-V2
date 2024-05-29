@@ -58,7 +58,7 @@ const Card = ({
 		if (isActive) {
 			cardRef.current?.scrollIntoView({
 				behavior: 'smooth',
-				block: 'center',
+				block: 'nearest',
 			});
 		}
 	}, [isActive]);

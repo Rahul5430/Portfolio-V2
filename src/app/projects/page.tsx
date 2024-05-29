@@ -6,7 +6,7 @@ export default function Work() {
 	return (
 		<>
 			<PageHeader data={pageData.projects} />
-			<ProjectCards threshold={0.4} />
+			<ProjectCards threshold={0.1} />
 		</>
 	);
 }

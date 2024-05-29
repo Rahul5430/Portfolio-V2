@@ -6,7 +6,7 @@ export default function Work() {
 	return (
 		<>
 			<PageHeader data={pageData.work} />
-			<WorkCards threshold={0.4} />
+			<WorkCards threshold={0.1} />
 		</>
 	);
 }
