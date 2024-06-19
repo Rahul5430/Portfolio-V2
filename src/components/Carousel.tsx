@@ -28,8 +28,6 @@ const Carousel = ({ data }: CarouselProps) => {
 											key={`${item.name}_primary`}
 											src={item.imageUrl}
 											alt={item.name}
-											width={item.width}
-											height={item.height}
 											className='h-8 w-auto'
 										/>
 									</div>
@@ -47,8 +45,6 @@ const Carousel = ({ data }: CarouselProps) => {
 											key={`${item.name}_secondary`}
 											src={item.imageUrl}
 											alt={item.name}
-											width={item.width}
-											height={item.height}
 											className='h-8 w-auto'
 										/>
 									</div>
@@ -66,8 +62,6 @@ const Carousel = ({ data }: CarouselProps) => {
 											key={`${item.name}_tertiary`}
 											src={item.imageUrl}
 											alt={item.name}
-											width={item.width}
-											height={item.height}
 											className='h-8 w-auto'
 										/>
 									</div>

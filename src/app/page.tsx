@@ -1,12 +1,16 @@
-import Contact from '@/components/Home/Contact';
+import dynamic from 'next/dynamic';
+
+import Featured from '@/components/Home/Featured';
 import Me from '@/components/Home/Me';
-import WorkCards from '@/components/Work/WorkCards';
+
+const Contact = dynamic(() => import('@/components/Home/Contact'));
 
 export default function Home() {
 	return (
 		<>
 			<Me />
-			<WorkCards threshold={0.4} />
+			<Featured type='work' />
+			<Featured type='project' />
 			<Contact />
 		</>
 	);

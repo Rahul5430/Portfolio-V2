@@ -4,7 +4,7 @@ import { useState } from 'react';
 
 import projects from '@/data/projects';
 
-import Card from './Card';
+import Card from '../elements/Card';
 
 const ProjectCards = ({ threshold = 0.7 }) => {
 	const [activeCard, setActiveCard] = useState(-1);

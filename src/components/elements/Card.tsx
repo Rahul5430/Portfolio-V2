@@ -7,23 +7,30 @@ import { VscGithubInverted } from 'react-icons/vsc';
 import { useInView } from 'react-intersection-observer';
 
 import useWindowSize from '@/hooks/useWindowSize';
-import { ProjectType } from '@/types';
+import { ProjectType, WorkType } from '@/types';
 
 interface CardProps {
-	data: ProjectType;
+	data: ProjectType | WorkType;
 	threshold: number;
 	index: number;
 	isActive: boolean;
-	allActive: boolean;
+	allActive?: boolean;
 	onClick: () => void;
 }
+
+export const isWorkType = (item: WorkType | ProjectType): item is WorkType =>
+	(item as WorkType).workplace !== undefined;
+
+export const isProjectType = (
+	item: WorkType | ProjectType
+): item is ProjectType => (item as ProjectType).name !== undefined;
 
 const Card = ({
 	data,
 	threshold,
 	index,
 	isActive,
-	allActive,
+	allActive = false,
 	onClick,
 }: CardProps) => {
 	const [isIntersecting, setIsIntersecting] = useState(false);
@@ -87,7 +94,7 @@ const Card = ({
 					<div className='z-10 flex h-[200px] w-[200px] rounded-xl max-tablet:h-24 max-tablet:w-24'>
 						<Image
 							src={data.imageUrl}
-							alt={data.name}
+							alt={isWorkType(data) ? data.workplace : data.name}
 							className='rounded-xl'
 						/>
 					</div>
@@ -98,7 +105,7 @@ const Card = ({
 							<h2
 								className={`text-base font-semibold leading-[120%] -tracking-[0.11px] text-[#ECEDEE] max-tablet:text-[15px] ${(isActive || allActive) && isMobile ? '!text-[13px]' : ''}`}
 							>
-								{data.name}
+								{isWorkType(data) ? data.workplace : data.name}
 							</h2>
 						</div>
 						<div className='opacity-[.55] outline-none'>
@@ -106,11 +113,25 @@ const Card = ({
 								{data.duration}
 							</p>
 						</div>
+						{isWorkType(data) && (
+							<div className='h-10 w-auto whitespace-pre-wrap opacity-60 outline-none'>
+								<p
+									className={`text-[15px] font-normal leading-5 -tracking-[0.09px] text-[#ECEDEE] max-tablet:text-sm max-tablet:leading-[140%] ${(isActive || allActive) && isMobile ? '!text-[13px]' : ''}`}
+								>
+									{data.position}
+								</p>
+							</div>
+						)}
 					</div>
 				</div>
 				<div
-					className={`flex flex-col px-5 transition-[opacity,transform] ${isActive || allActive ? 'translate-x-0 scale-100 opacity-100' : 'hidden -translate-x-full scale-0 opacity-0'}`}
+					className={`flex flex-col overflow-hidden px-5 transition-[opacity,transform] ${isActive || allActive ? 'translate-x-0 scale-100 opacity-100' : 'hidden -translate-x-full scale-0 opacity-0'}`}
 				>
+					{isWorkType(data) && (
+						<p className='z-10 pt-2 text-sm font-medium italic leading-[120%] -tracking-[0.11px] text-[#ECEDEE] opacity-[.55] max-tablet:pb-2 max-tablet:pt-0 max-tablet:text-xs'>
+							{data.about}
+						</p>
+					)}
 					<ul className='z-[9] list-disc py-2.5 duration-1000 max-tablet:pb-2 max-tablet:pt-0'>
 						{data.description.map((item) => (
 							<li
@@ -125,7 +146,7 @@ const Card = ({
 						Tech Stack:
 						{data.technologies.map(({ label, icon, customBg }) => (
 							<div
-								key={`${data.name}-${label}`}
+								key={`${isWorkType(data) ? data.workplace : data.name}-${label}`}
 								className={`${customBg} flex h-9 w-9 items-center justify-center rounded-lg max-tablet:h-8 max-tablet:w-8`}
 							>
 								<Image
@@ -142,7 +163,7 @@ const Card = ({
 							<a
 								className='flex h-9 w-9 items-center justify-center rounded-lg pl-2 max-tablet:h-8 max-tablet:w-8'
 								// eslint-disable-next-line react/no-array-index-key
-								key={`${data.name}-${label}-${idx}`}
+								key={`${isWorkType(data) ? data.workplace : data.name}-${label}-${idx}`}
 								target='_blank'
 								rel='noreferrer'
 								href={url}

@@ -4,7 +4,7 @@ import { useState } from 'react';
 
 import { freelancingData, internshipsData, openSourceData } from '@/data/work';
 
-import Card from './Card';
+import Card from '../elements/Card';
 
 const WorkCards = ({ threshold = 0.7 }) => {
 	const [activeCard, setActiveCard] = useState(-1);
@@ -21,8 +21,8 @@ const WorkCards = ({ threshold = 0.7 }) => {
 	};
 
 	return (
-		<div className='flex-main w-full flex-col gap-2.5'>
-			<div className='mx-auto flex items-center justify-center gap-3 text-[#72788899]'>
+		<div className='flex-main w-full flex-col'>
+			<div className='mx-auto mb-2.5 flex items-center justify-center gap-3 text-[#72788899]'>
 				<span className='text-xs font-semibold opacity-40'>Grid</span>
 				<div className='flex justify-center rounded-[22px] bg-[#ecedee26] p-0.5'>
 					<button
@@ -74,14 +74,14 @@ const WorkCards = ({ threshold = 0.7 }) => {
 				</div>
 				<span className='text-xs font-semibold opacity-40'>List</span>
 			</div>
-			<h3 className='text-sm font-medium text-[#72788899]'>
+			<h3 className='mb-2.5 text-sm font-medium text-[#72788899]'>
 				(You can also click on a card to see more details)
 			</h3>
 			<h3 className='mt-6 text-sm font-semibold uppercase tracking-[3px] text-[#72788899] max-tablet:text-xs'>
 				Internships
 			</h3>
-			<div className='pb-10 max-tablet:w-full max-tablet:p-0'>
-				<div className='w-708 p-1 max-tablet:w-full max-tablet:pb-[72px]'>
+			<div className='max-tablet:w-full'>
+				<div className='w-708 p-1 max-tablet:w-full max-tablet:pb-16'>
 					<div className='grid grid-flow-row-dense auto-rows-fr grid-cols-3 justify-center gap-3.5 max-tablet:auto-rows-auto max-tablet:grid-cols-[repeat(1,_minmax(200px,_1fr))] max-tablet:gap-3'>
 						{internshipsData.map((work, index) => (
 							<Card
@@ -97,11 +97,11 @@ const WorkCards = ({ threshold = 0.7 }) => {
 					</div>
 				</div>
 			</div>
-			<h3 className='mt-6 text-sm font-semibold uppercase tracking-[3px] text-[#72788899] max-tablet:text-xs'>
+			<h3 className='text-sm font-semibold uppercase tracking-[3px] text-[#72788899] max-tablet:text-xs'>
 				Freelancing
 			</h3>
-			<div className='pb-10 max-tablet:w-full max-tablet:p-0'>
-				<div className='w-708 p-1 max-tablet:w-full max-tablet:pb-[72px]'>
+			<div className='max-tablet:w-full'>
+				<div className='w-708 p-1 max-tablet:w-full max-tablet:pb-16'>
 					<div className='grid grid-flow-row-dense auto-rows-fr grid-cols-3 justify-center gap-3.5 max-tablet:auto-rows-auto max-tablet:grid-cols-[repeat(1,_minmax(200px,_1fr))] max-tablet:gap-3'>
 						{freelancingData.map((work, index) => (
 							<Card
@@ -121,11 +121,11 @@ const WorkCards = ({ threshold = 0.7 }) => {
 					</div>
 				</div>
 			</div>
-			<h3 className='mt-6 text-sm font-semibold uppercase tracking-[3px] text-[#72788899] max-tablet:text-xs'>
+			<h3 className='text-sm font-semibold uppercase tracking-[3px] text-[#72788899] max-tablet:text-xs'>
 				Open-Source
 			</h3>
-			<div className='pb-10 max-tablet:w-full max-tablet:p-0'>
-				<div className='w-708 p-1 max-tablet:w-full max-tablet:pb-[72px]'>
+			<div className='max-tablet:w-full'>
+				<div className='w-708 p-1 max-tablet:w-full max-tablet:pb-16'>
 					<div className='grid grid-flow-row-dense auto-rows-fr grid-cols-3 justify-center gap-3.5 max-tablet:auto-rows-auto max-tablet:grid-cols-[repeat(1,_minmax(200px,_1fr))] max-tablet:gap-3'>
 						{openSourceData.map((work, index) => (
 							<Card
