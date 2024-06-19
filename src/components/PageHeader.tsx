@@ -34,13 +34,11 @@ const PageHeader = ({ data }: { data: PageHeaderProps }) => {
 					className='opacity-20'
 					style={{ transform: 'scale(-1,1)' }}
 				/>
-				<span>
-					<Image
-						src={ThreeDots}
-						alt='stars'
-						className='mx-6 invert-[1]'
-					/>
-				</span>
+				<Image
+					src={ThreeDots}
+					alt='stars'
+					className='mx-6 invert-[1]'
+				/>
 				<Image src={Underline} alt='underline' className='opacity-20' />
 			</div>
 		</div>
