@@ -10,10 +10,8 @@ import logo from '@/assets/white.png';
 import { socialLinks } from '@/data/links';
 import useWindowSize from '@/hooks/useWindowSize';
 
-const NavButtons = dynamic(() => import('./NavButtons'), { ssr: false });
-const AnimatedHamburgerIcon = dynamic(() => import('./AnimatedHamburgerIcon'), {
-	ssr: false,
-});
+const NavButtons = dynamic(() => import('./NavButtons'));
+const AnimatedHamburgerIcon = dynamic(() => import('./AnimatedHamburgerIcon'));
 
 const Navbar = () => {
 	const { width } = useWindowSize();

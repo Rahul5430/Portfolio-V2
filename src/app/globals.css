@@ -33,7 +33,7 @@
 	}
 
 	.speech-bubble {
-		@apply relative w-1/2 translate-y-0 animate-float rounded-[11px] bg-[#ece5ce] p-[30px] text-justify text-[15px] text-[#774f38] shadow-[-20px_20px_rgba(131,175,155,1)] max-tablet:w-[300px] max-tablet:mt-10;
+		@apply relative w-1/2 translate-y-0 animate-float rounded-[11px] bg-[#ece5ce] p-[30px] text-justify text-[15px] text-[#774f38] shadow-[-20px_20px_rgba(131,175,155,1)] max-tablet:mt-10 max-tablet:w-[300px];
 	}
 
 	.speech-bubble::after {
