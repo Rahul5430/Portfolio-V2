@@ -18,24 +18,19 @@ const Me = () => (
 					Rahul Sharma
 				</h1>
 				<p className='text-base font-semibold leading-[22px] -tracking-[0.18px] text-[#72788899]'>
-					Designer, Maker, Dreamer
+					Dreamer, Innovator, Visionary
 				</p>
 			</div>
 		</div>
 		<p className='text-xl font-normal leading-[29px] -tracking-[0.34px] text-bright-gray max-tablet:text-[17px] max-tablet:leading-[150%]'>
-			A design wizard voyaging into the metaverse. I tell the story
-			through my design and illustrations. I spent most of my time
-			designing for brands and creating open-source design resources.
+			A versatile full-stack cross-platform developer, blending creativity
+			with technical expertise to craft seamless digital solutions.
+			Specializing in brand design and creating essential design resources
+			and tools.
 		</p>
 		<div className='flex-main items-start justify-start gap-2 max-tablet:gap-1'>
 			<p className='text-lg font-medium leading-6 -tracking-[0.25px] text-[#72788899] max-tablet:text-[15px]'>
-				Building what I love at
-			</p>
-			<p className='gradient-text from-[#4AB1F1] to-[#D749AF] text-lg font-semibold leading-6 -tracking-[0.25px] max-tablet:text-[15px]'>
-				@overlayz
-			</p>
-			<p className='text-lg font-medium leading-6 -tracking-[0.25px] text-[#72788899] max-tablet:text-[15px]'>
-				studio
+				Crafting Digital Realities, One Line of Code at a Time
 			</p>
 		</div>
 		<Carousel data={carouselData} />

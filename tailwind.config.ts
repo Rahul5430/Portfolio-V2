@@ -25,7 +25,7 @@ const config: Config = {
 			},
 			animation: {
 				fadeAnim: 'fade-animation 700ms ease-in',
-				carousel: 'carousel 15s linear infinite',
+				carousel: 'carousel 30s linear infinite',
 				float: 'float 5s ease-in-out infinite',
 				float2: 'float2 5s ease-in-out infinite',
 			},
