@@ -77,7 +77,7 @@ const WorkCards = ({ threshold = 0.7 }) => {
 			<h3 className='mb-2.5 text-sm font-medium text-[#72788899]'>
 				(You can also click on a card to see more details)
 			</h3>
-			<h3 className='mt-6 text-sm font-semibold uppercase tracking-[3px] text-[#72788899] max-tablet:text-xs'>
+			<h3 className='mt-6 text-sm font-semibold uppercase tracking-[3px] text-[#9799AA] max-tablet:text-xs'>
 				Internships
 			</h3>
 			<div className='max-tablet:w-full'>
@@ -97,7 +97,7 @@ const WorkCards = ({ threshold = 0.7 }) => {
 					</div>
 				</div>
 			</div>
-			<h3 className='text-sm font-semibold uppercase tracking-[3px] text-[#72788899] max-tablet:text-xs'>
+			<h3 className='text-sm font-semibold uppercase tracking-[3px] text-[#9799AA] max-tablet:text-xs'>
 				Freelancing
 			</h3>
 			<div className='max-tablet:w-full'>
@@ -121,7 +121,7 @@ const WorkCards = ({ threshold = 0.7 }) => {
 					</div>
 				</div>
 			</div>
-			<h3 className='text-sm font-semibold uppercase tracking-[3px] text-[#72788899] max-tablet:text-xs'>
+			<h3 className='text-sm font-semibold uppercase tracking-[3px] text-[#9799AA] max-tablet:text-xs'>
 				Open-Source
 			</h3>
 			<div className='max-tablet:w-full'>

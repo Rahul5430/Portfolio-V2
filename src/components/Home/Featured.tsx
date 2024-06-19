@@ -25,7 +25,7 @@ const Featured = ({ type, threshold = 0.05 }: FeaturedProps) => {
 		<div className='flex-main w-full flex-col gap-2.5'>
 			<div className='flex-main w-full justify-between px-4'>
 				<div className='h-auto w-auto whitespace-pre outline-none'>
-					<h3 className='text-sm font-semibold uppercase tracking-[3px] text-[#72788899] max-tablet:text-xs'>
+					<h3 className='text-sm font-semibold uppercase tracking-[3px] text-[#9799AA] max-tablet:text-xs'>
 						Featured {type === 'work' ? 'Work' : 'Projects'}
 					</h3>
 				</div>

@@ -29,6 +29,7 @@ const Carousel = ({ data }: CarouselProps) => {
 											src={item.imageUrl}
 											alt={item.name}
 											className='h-8 w-auto'
+											priority
 										/>
 									</div>
 								</li>
@@ -46,6 +47,7 @@ const Carousel = ({ data }: CarouselProps) => {
 											src={item.imageUrl}
 											alt={item.name}
 											className='h-8 w-auto'
+											priority
 										/>
 									</div>
 								</li>
@@ -63,6 +65,7 @@ const Carousel = ({ data }: CarouselProps) => {
 											src={item.imageUrl}
 											alt={item.name}
 											className='h-8 w-auto'
+											priority
 										/>
 									</div>
 								</li>

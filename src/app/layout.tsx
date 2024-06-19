@@ -10,7 +10,7 @@ import BG_TOP from '@/assets/bg_top.webp';
 import Navbar from '@/components/elements/Navbar';
 import Footer from '@/components/Footer';
 
-const inter = Inter({ subsets: ['latin'] });
+const inter = Inter({ subsets: ['latin'], display: 'swap' });
 
 export const metadata: Metadata = {
 	title: 'Create Next App',
@@ -36,7 +36,6 @@ export default function RootLayout({
 							alt='Gradient Background'
 							src={BG_BOTTOM}
 							className='pointer-events-none h-full w-full select-none object-cover object-center'
-							priority
 						/>
 					</div>
 					<div className='pointer-events-none absolute top-0 z-0 h-[600px] w-desktop max-w-desktop flex-none animate-fadeAnim'>
@@ -44,6 +43,7 @@ export default function RootLayout({
 							alt='Gradient Background'
 							src={BG_TOP}
 							className='pointer-events-none h-full w-full select-none object-cover object-center'
+							priority
 						/>
 					</div>
 				</div>

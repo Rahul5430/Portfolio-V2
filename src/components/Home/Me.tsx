@@ -12,6 +12,7 @@ const Me = () => (
 				src={Pic}
 				alt='Me'
 				className='h-[90px] w-[90px] rounded-full'
+				priority
 			/>
 			<div className='flex-main flex-col items-start justify-start gap-1'>
 				<h1 className='text-3xl font-bold leading-[1.2em] -tracking-[1.5px] text-bright-gray max-tablet:text-[22px] max-tablet:leading-[130%] max-tablet:-tracking-[1px]'>
