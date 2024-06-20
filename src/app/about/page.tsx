@@ -1,9 +1,18 @@
+import type { Metadata } from 'next';
 import Image from 'next/image';
 
 import profilePic from '@/assets/rahul.JPG';
 import SkillsSection from '@/components/About/SkillsSection';
 import PageHeader from '@/components/PageHeader';
 import pageData from '@/data/pages';
+
+export const metadata: Metadata = {
+	title: 'About Me | Rahul Sharma - Full-Stack Cross-Platform Developer',
+	description:
+		'Learn more about Rahul Sharma, a full-stack cross-platform developer. Read about my skills, experience, and passion for developing high-quality web and cross-platform applications.',
+	keywords:
+		'about me, full-stack developer, cross-platform developer, web developer, Next.js, React, Node.js, Rahul Sharma',
+};
 
 export default function Work() {
 	return (

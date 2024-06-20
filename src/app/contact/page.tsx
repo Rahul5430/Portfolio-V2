@@ -1,6 +1,16 @@
+import type { Metadata } from 'next';
+
 import PageHeader from '@/components/PageHeader';
 import { contactLinks } from '@/data/links';
 import pageData from '@/data/pages';
+
+export const metadata: Metadata = {
+	title: 'Contact | Rahul Sharma - Full-Stack Cross-Platform Developer',
+	description:
+		'Get in touch with Rahul Sharma, a full-stack cross-platform developer. Contact me for inquiries, project collaborations, or just to connect.',
+	keywords:
+		'contact, get in touch, inquiries, project collaboration, full-stack developer, cross-platform developer, Next.js, React, Rahul Sharma',
+};
 
 export default function Work() {
 	return (
