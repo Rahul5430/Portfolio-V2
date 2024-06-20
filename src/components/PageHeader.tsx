@@ -33,13 +33,20 @@ const PageHeader = ({ data }: { data: PageHeaderProps }) => {
 					alt='underline'
 					className='opacity-20'
 					style={{ transform: 'scale(-1,1)' }}
+					priority
 				/>
 				<Image
 					src={ThreeDots}
 					alt='stars'
 					className='mx-6 invert-[1]'
+					priority
 				/>
-				<Image src={Underline} alt='underline' className='opacity-20' />
+				<Image
+					src={Underline}
+					alt='underline'
+					className='opacity-20'
+					priority
+				/>
 			</div>
 		</div>
 	);

@@ -83,7 +83,7 @@ const Navbar = () => {
 					>
 						<div className='h-auto w-7'>
 							<Link href='/' onClick={handleLinkClick}>
-								<Image src={logo} alt='Logo' />
+								<Image src={logo} alt='Logo' priority />
 							</Link>
 						</div>
 						<NavButtons
