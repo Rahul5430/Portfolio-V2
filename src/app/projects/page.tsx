@@ -12,7 +12,7 @@ export const metadata: Metadata = {
 		'projects, portfolio, web development projects, full-stack projects, cross-platform projects, Next.js, React, Node.js, Rahul Sharma',
 };
 
-export default function Work() {
+export default function Projects() {
 	return (
 		<>
 			<PageHeader data={pageData.projects} />

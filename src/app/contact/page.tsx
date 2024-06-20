@@ -12,7 +12,7 @@ export const metadata: Metadata = {
 		'contact, get in touch, inquiries, project collaboration, full-stack developer, cross-platform developer, Next.js, React, Rahul Sharma',
 };
 
-export default function Work() {
+export default function Contact() {
 	return (
 		<>
 			<PageHeader data={pageData.contact} />

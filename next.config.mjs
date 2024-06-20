@@ -1,4 +1,5 @@
 import withPWAInit from '@ducanh2912/next-pwa';
+import withPlaiceholder from '@plaiceholder/next';
 
 const withPWA = withPWAInit({
 	dest: 'public',
@@ -33,4 +34,4 @@ const nextConfig = {
 	},
 };
 
-export default withPWA(nextConfig);
+export default withPWA(withPlaiceholder(nextConfig));
