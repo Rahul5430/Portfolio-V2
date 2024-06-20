@@ -11,7 +11,7 @@
 
 @layer components {
 	.body-container {
-		@apply relative flex w-auto flex-col items-center overflow-hidden bg-[#0A0A0D];
+		@apply relative flex w-auto flex-col items-center overflow-hidden bg-[#0A0A0D] font-sans;
 	}
 
 	.main-container {

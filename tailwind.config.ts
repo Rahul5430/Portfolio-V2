@@ -13,6 +13,9 @@ const config: Config = {
 			desktop: '1200px',
 		},
 		extend: {
+			fontFamily: {
+				sans: ['var(--font-inter)'],
+			},
 			colors: {
 				'bright-gray': '#ECEDEE',
 			},
