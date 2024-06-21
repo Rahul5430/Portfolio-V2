@@ -203,7 +203,7 @@ export const metadata: Metadata = {
 		description:
 			'Welcome to the portfolio of Rahul Sharma, a full-stack cross-platform developer with expertise in Next.js, React, Node.js, and more. Explore my work, projects, and get in touch.',
 		url: 'https://rahulsharma.vercel.app/',
-		siteName: 'Rahul Sharma - Full Stack Developer',
+		siteName: 'Full-Stack Cross-Platform Developer | Rahul Sharma',
 		type: 'website',
 		images: [
 			{
