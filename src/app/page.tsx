@@ -1,9 +1,10 @@
 import type { Metadata } from 'next';
 import dynamic from 'next/dynamic';
 
-import Featured from '@/components/Home/Featured';
 import Me from '@/components/Home/Me';
 
+const FeaturedWork = dynamic(() => import('@/components/Home/Featured'));
+const FeaturedProjects = dynamic(() => import('@/components/Home/Featured'));
 const Contact = dynamic(() => import('@/components/Home/Contact'));
 
 export const metadata: Metadata = {
@@ -18,8 +19,8 @@ export default function Home() {
 	return (
 		<>
 			<Me />
-			<Featured type='work' />
-			<Featured type='project' />
+			<FeaturedWork type='work' />
+			<FeaturedProjects type='project' />
 			<Contact />
 		</>
 	);

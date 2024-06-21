@@ -1,11 +1,10 @@
 import type { Metadata } from 'next';
 import Image from 'next/image';
 
-import profilePic from '@/assets/rahul.JPG';
+import profilePic from '@/assets/rahul.jpg';
 import SkillsSection from '@/components/About/SkillsSection';
 import PageHeader from '@/components/PageHeader';
 import pageData from '@/data/pages';
-import getBase64 from '@/functions/getBase64';
 
 export const metadata: Metadata = {
 	title: 'About Me | Rahul Sharma - Full-Stack Cross-Platform Developer',
@@ -16,8 +15,6 @@ export const metadata: Metadata = {
 };
 
 export default async function About() {
-	const base64 = await getBase64('src/assets/rahul.JPG');
-
 	return (
 		<>
 			<PageHeader data={pageData.about} />
@@ -36,7 +33,6 @@ export default async function About() {
 					className='h-auto w-[300px] cursor-pointer rounded-[11px] shadow-[5px_10px_18px_rgba(136,136,136,1)] transition-all duration-200 ease-in-out hover:scale-105 hover:shadow-[5px_10px_18px_rgba(59,89,152,1)]'
 					priority
 					placeholder='blur'
-					blurDataURL={base64}
 				/>
 			</div>
 			<SkillsSection />

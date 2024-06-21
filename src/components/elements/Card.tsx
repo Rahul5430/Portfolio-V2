@@ -96,6 +96,7 @@ const Card = ({
 							src={data.imageUrl}
 							alt={isWorkType(data) ? data.workplace : data.name}
 							className='rounded-xl'
+							placeholder='blur'
 						/>
 					</div>
 					<div className='z-10 flex flex-col items-start justify-start gap-0.5 max-tablet:w-min max-tablet:gap-1'>
@@ -124,67 +125,71 @@ const Card = ({
 						)}
 					</div>
 				</div>
-				<div
-					className={`flex flex-col overflow-hidden px-5 transition-[opacity,transform] ${isActive || allActive ? 'translate-x-0 scale-100 opacity-100' : 'hidden -translate-x-full scale-0 opacity-0'}`}
-				>
-					{isWorkType(data) && (
-						<p className='z-10 pt-2 text-sm font-medium italic leading-[120%] -tracking-[0.11px] text-[#ECEDEE] opacity-[.55] max-tablet:pb-2 max-tablet:pt-0 max-tablet:text-xs'>
-							{data.about}
-						</p>
-					)}
-					<ul className='z-[9] list-disc py-2.5 duration-1000 max-tablet:pb-2 max-tablet:pt-0'>
-						{data.description.map((item) => (
-							<li
-								key={item}
-								className={`text-base font-medium leading-[120%] -tracking-[0.11px] text-[#ECEDEE] max-tablet:text-[15px] ${(isActive || allActive) && isMobile ? '!text-[13px]' : ''}`}
-							>
-								{item}
-							</li>
-						))}
-					</ul>
-					<div className='z-10 flex flex-row items-center gap-4 text-base font-medium leading-[120%] -tracking-[0.11px] text-[#ECEDEE] max-tablet:gap-2 max-tablet:text-[13px]'>
-						Tech Stack:
-						{data.technologies.map(({ label, icon, customBg }) => (
-							<div
-								key={`${isWorkType(data) ? data.workplace : data.name}-${label}`}
-								className={`${customBg} flex h-9 w-9 items-center justify-center rounded-lg max-tablet:h-8 max-tablet:w-8`}
-							>
-								<Image
-									src={icon}
-									alt={label}
-									className='h-[30px] w-auto max-tablet:h-[25px]'
-								/>
-							</div>
-						))}
+				{(isActive || allActive) && (
+					<div
+						className={`flex flex-col overflow-hidden px-5 transition-[opacity,transform] ${isActive || allActive ? 'translate-x-0 scale-100 opacity-100' : 'hidden -translate-x-full scale-0 opacity-0'}`}
+					>
+						{isWorkType(data) && (
+							<p className='z-10 pt-2 text-sm font-medium italic leading-[120%] -tracking-[0.11px] text-[#ECEDEE] opacity-[.55] max-tablet:pb-2 max-tablet:pt-0 max-tablet:text-xs'>
+								{data.about}
+							</p>
+						)}
+						<ul className='z-[9] list-disc py-2.5 duration-1000 max-tablet:pb-2 max-tablet:pt-0'>
+							{data.description.map((item) => (
+								<li
+									key={item}
+									className={`text-base font-medium leading-[120%] -tracking-[0.11px] text-[#ECEDEE] max-tablet:text-[15px] ${(isActive || allActive) && isMobile ? '!text-[13px]' : ''}`}
+								>
+									{item}
+								</li>
+							))}
+						</ul>
+						<div className='z-10 flex flex-row items-center gap-4 text-base font-medium leading-[120%] -tracking-[0.11px] text-[#ECEDEE] max-tablet:gap-2 max-tablet:text-[13px]'>
+							Tech Stack:
+							{data.technologies.map(
+								({ label, icon, customBg }) => (
+									<div
+										key={`${isWorkType(data) ? data.workplace : data.name}-${label}`}
+										className={`${customBg} flex h-9 w-9 items-center justify-center rounded-lg max-tablet:h-8 max-tablet:w-8`}
+									>
+										<Image
+											src={icon}
+											alt={label}
+											className='h-[30px] w-auto max-tablet:h-[25px]'
+										/>
+									</div>
+								)
+							)}
+						</div>
+						<div className='z-10 flex flex-row items-center py-2 text-base font-medium leading-[120%] -tracking-[0.11px] text-[#ECEDEE] max-tablet:py-0.5 max-tablet:text-[13px]'>
+							Links:
+							{data.links.map(({ label, url }, idx) => (
+								<a
+									className='flex h-9 w-9 items-center justify-center rounded-lg pl-2 max-tablet:h-8 max-tablet:w-8'
+									// eslint-disable-next-line react/no-array-index-key
+									key={`${isWorkType(data) ? data.workplace : data.name}-${label}-${idx}`}
+									target='_blank'
+									rel='noreferrer'
+									href={url}
+									onClick={(e) => e.stopPropagation()}
+								>
+									{label === 'GitHub' && (
+										<VscGithubInverted
+											color='#ECEDEE'
+											className='h-[30px] w-auto max-tablet:h-[25px]'
+										/>
+									)}
+									{label === 'Website' && (
+										<BiLink
+											color='#ECEDEE'
+											className='h-[30px] w-auto max-tablet:h-[25px]'
+										/>
+									)}
+								</a>
+							))}
+						</div>
 					</div>
-					<div className='z-10 flex flex-row items-center py-2 text-base font-medium leading-[120%] -tracking-[0.11px] text-[#ECEDEE] max-tablet:py-0.5 max-tablet:text-[13px]'>
-						Links:
-						{data.links.map(({ label, url }, idx) => (
-							<a
-								className='flex h-9 w-9 items-center justify-center rounded-lg pl-2 max-tablet:h-8 max-tablet:w-8'
-								// eslint-disable-next-line react/no-array-index-key
-								key={`${isWorkType(data) ? data.workplace : data.name}-${label}-${idx}`}
-								target='_blank'
-								rel='noreferrer'
-								href={url}
-								onClick={(e) => e.stopPropagation()}
-							>
-								{label === 'GitHub' && (
-									<VscGithubInverted
-										color='#ECEDEE'
-										className='h-[30px] w-auto max-tablet:h-[25px]'
-									/>
-								)}
-								{label === 'Website' && (
-									<BiLink
-										color='#ECEDEE'
-										className='h-[30px] w-auto max-tablet:h-[25px]'
-									/>
-								)}
-							</a>
-						))}
-					</div>
-				</div>
+				)}
 			</div>
 		</div>
 	);
